@@ -4,41 +4,14 @@
   <title>TSSE — Topshelf Sounds & Entertainment</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body {
-      margin: 0;
-      background: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    header {
-      padding: 40px 20px;
-    }
-    img.logo {
-      width: 200px;
-    }
-    h1 {
-      font-size: 36px;
-      margin-top: 20px;
-      color: gold;
-      letter-spacing: 2px;
-    }
-    p {
-      max-width: 500px;
-      margin: 20px auto;
-      font-size: 18px;
-      line-height: 1.5;
-    }
-    .nav a {
-      display: inline-block;
-      margin: 10px 15px;
-      color: gold;
-      font-size: 18px;
-      text-decoration: none;
-    }
+    body { margin:0; background:#000; color:#fff; font-family:Arial,sans-serif; text-align:center; }
+    header { padding:40px 20px; }
+    img.logo { width:200px; }
+    h1 { font-size:36px; margin-top:20px; color:gold; letter-spacing:2px; }
+    p { max-width:500px; margin:20px auto; font-size:18px; line-height:1.5; }
+    .nav a { display:inline-block; margin:10px 15px; color:gold; font-size:18px; text-decoration:none; }
   </style>
 </head>
-
 <body>
   <header>
     <img src="tsse-logo.png" class="logo">
@@ -50,168 +23,6 @@
       <a href="contact.html">Contact</a>
     </div>
   </header>
-
-  <p>Where Stars Are Born.  
-  Home of Chea Butta, Kvng Swagg, and rising talent from the culture.</p>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>TSSE Artists</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      margin: 0;
-      background: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    h1 {
-      color: gold;
-      margin-top: 30px;
-    }
-    .nav a {
-      display: inline-block;
-      margin: 10px 15px;
-      color: gold;
-      font-size: 18px;
-      text-decoration: none;
-    }
-    .artist {
-      margin-top: 40px;
-    }
-    .artist img {
-      width: 200px;
-      border-radius: 10px;
-      border: 2px solid gold;
-    }
-  </style>
-</head>
-
-<body>
-  <h1>TSSE Artists</h1>
-
-  <div class="nav">
-    <a href="index.html">Home</a>
-    <a href="artists.html">Artists</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-  <div class="artist">
-    <img src="chea-butta.png">
-    <h2>Chea Butta</h2>
-    <p>Artist — "Everybody Love Butta"</p>
-  </div>
-
-  <div class="artist">
-    <img src="kvng-swagg.png">
-    <h2>Kvng Swagg</h2>
-    <p>Artist — "Ballin", "Millions"</p>
-  </div>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>About TSSE</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      margin: 0;
-      background: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    h1 {
-      color: gold;
-      margin-top: 30px;
-    }
-    p {
-      max-width: 600px;
-      margin: 20px auto;
-      font-size: 18px;
-      line-height: 1.6;
-    }
-    .nav a {
-      display: inline-block;
-      margin: 10px 15px;
-      color: gold;
-      font-size: 18px;
-      text-decoration: none;
-    }
-  </style>
-</head>
-
-<body>
-  <h1>About TSSE</h1>
-
-  <div class="nav">
-    <a href="index.html">Home</a>
-    <a href="artists.html">Artists</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-  <p>
-    Topshelf Sounds & Entertainment (TSSE) is an independent label based in Virginia.
-    Our mission is to break new talent, amplify authentic voices, and bring a street-luxury
-    sound to the culture.  
-  </p>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Contact TSSE</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      margin: 0;
-      background: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    h1 {
-      color: gold;
-      margin-top: 30px;
-    }
-    p {
-      max-width: 600px;
-      margin: 20px auto;
-      font-size: 18px;
-      line-height: 1.6;
-    }
-    .nav a {
-      display: inline-block;
-      margin: 10px 15px;
-      color: gold;
-      font-size: 18px;
-      text-decoration: none;
-    }
-  </style>
-</head>
-
-<body>
-  <h1>Contact TSSE</h1>
-
-  <div class="nav">
-    <a href="index.html">Home</a>
-    <a href="artists.html">Artists</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-  <p>For bookings, features, or business inquiries:</p>
-
-  <p><b>Email:</b> info@tsse.online</p>
-
+  <p>Where Stars Are Born.<br>Home of Chea Butta, Kvng Swagg, and rising talent from the culture.</p>
 </body>
 </html>
