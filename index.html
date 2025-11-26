@@ -3,32 +3,33 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>TSSE — Topshelf Sounds & Entertainment</title>
+<title>Topshelf Sounds & Ent.</title>
 
 <style>
     body {
         margin: 0;
         font-family: 'Arial', sans-serif;
-        background-color: #000;
-        color: #fff;
+        background-color: #ffffff;
+        color: #111;
     }
 
-    /* GLOBAL GOLD */
     :root {
         --tsse-gold: #d4af37;
-        --tsse-chrome: #c0c0c0;
+        --tsse-chrome: #9f9f9f;
     }
 
     /* HERO */
     .hero {
-        background: url('https://via.placeholder.com/1600x900/111/000?text=TSSE+Background') no-repeat center/cover;
+        background: url('https://via.placeholder.com/1600x900/fff/ccc?text=Topshelf+Sounds+%26+Ent') 
+                    no-repeat center/cover;
         padding: 180px 20px;
         text-align: center;
         position: relative;
+        color: #000;
     }
 
     .hero-overlay {
-        background: rgba(0,0,0,0.75);
+        background: rgba(255,255,255,0.7);
         position: absolute;
         top: 0; left: 0;
         right: 0; bottom: 0;
@@ -50,27 +51,24 @@
     .hero p {
         font-size: 22px;
         margin-top: 10px;
-        opacity: 0.9;
-    }
-
-    .hero-buttons {
-        margin-top: 35px;
+        opacity: 0.8;
     }
 
     .hero-buttons a {
         padding: 15px 35px;
         background: var(--tsse-gold);
-        color: #000;
+        color: #fff;
         text-decoration: none;
         text-transform: uppercase;
         font-weight: bold;
         border-radius: 6px;
         margin: 0 10px;
         transition: 0.3s;
+        display: inline-block;
     }
 
     .hero-buttons a:hover {
-        background: #fff;
+        background: #000;
     }
 
     /* FEATURED */
@@ -80,22 +78,24 @@
     }
 
     .featured h2 {
-        color: var(--tsse-gold);
+        color: #000;
         font-size: 36px;
         margin-bottom: 40px;
+        font-weight: 700;
     }
 
     .featured-card {
         max-width: 900px;
         margin: 0 auto;
-        background: #111;
-        border: 1px solid #333;
+        background: #fff;
         border-radius: 12px;
         padding: 30px;
         display: flex;
         gap: 25px;
         flex-wrap: wrap;
         justify-content: center;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        border: 1px solid #eee;
     }
 
     .featured-card img {
@@ -107,13 +107,14 @@
     .featured-info h3 {
         font-size: 28px;
         margin: 0;
-        color: var(--tsse-gold);
+        color: #000;
     }
 
     .featured-info p {
         margin-top: 10px;
         max-width: 350px;
         line-height: 1.5;
+        color: #444;
     }
 
     .featured-info a {
@@ -121,22 +122,22 @@
         margin-top: 20px;
         padding: 12px 25px;
         background: var(--tsse-gold);
-        color: #000;
+        color: #fff;
         font-weight: bold;
         border-radius: 6px;
         text-decoration: none;
     }
 
-    /* ARTISTS PREVIEW */
+    /* ARTISTS */
     .artists {
-        background: #0a0a0a;
+        background: #fafafa;
         padding: 70px 20px;
         text-align: center;
     }
 
     .artists h2 {
         font-size: 36px;
-        color: var(--tsse-gold);
+        color: #000;
         margin-bottom: 40px;
     }
 
@@ -148,12 +149,13 @@
     }
 
     .artist-card {
-        background: #111;
+        background: #fff;
         width: 260px;
         padding: 20px;
         border-radius: 12px;
-        border: 1px solid #333;
         text-align: center;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        border: 1px solid #eee;
     }
 
     .artist-card img {
@@ -164,7 +166,7 @@
 
     .artist-card h3 {
         margin-top: 15px;
-        color: var(--tsse-gold);
+        color: #111;
     }
 
     .artist-card a {
@@ -172,21 +174,21 @@
         margin-top: 10px;
         padding: 10px 20px;
         background: var(--tsse-gold);
-        color: #000;
+        color: #fff;
         text-decoration: none;
         font-weight: bold;
         border-radius: 6px;
     }
 
-    /* ABOUT SECTION */
+    /* ABOUT */
     .about {
         padding: 80px 20px;
         text-align: center;
-        background: linear-gradient(to bottom, #000, #0c0c0c);
+        background: #fff;
     }
 
     .about h2 {
-        color: var(--tsse-gold);
+        color: #000;
         font-size: 36px;
         margin-bottom: 20px;
     }
@@ -195,19 +197,19 @@
         max-width: 700px;
         margin: 0 auto;
         line-height: 1.6;
-        opacity: 0.95;
+        color: #444;
     }
 
     /* FOOTER */
     footer {
         padding: 40px;
         text-align: center;
-        background: #000;
-        border-top: 1px solid #222;
+        background: #f4f4f4;
+        border-top: 1px solid #ddd;
     }
 
     footer p {
-        opacity: 0.6;
+        color: #666;
         font-size: 14px;
     }
 </style>
@@ -219,7 +221,7 @@
 <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-        <h1>TSSE</h1>
+        <h1>Topshelf Sounds & Ent.</h1>
         <p>Where Stars Are Born</p>
         <div class="hero-buttons">
             <a href="#">View Artists</a>
@@ -228,7 +230,7 @@
     </div>
 </section>
 
-<!-- FEATURED RELEASE -->
+<!-- FEATURED -->
 <section class="featured">
     <h2>Featured Release</h2>
 
@@ -236,31 +238,31 @@
         <img src="https://via.placeholder.com/250x250?text=Chea+Butta" alt="Chea Butta">
         <div class="featured-info">
             <h3>Chea Butta — Everybody Love Butta</h3>
-            <p>The latest release from TSSE’s rising star. Stream it everywhere and tap into the movement.</p>
+            <p>The new release from Topshelf Sounds & Ent.'s rising star. Stream it everywhere today.</p>
             <a href="#">Listen Now</a>
         </div>
     </div>
 </section>
 
-<!-- ARTIST ROSTER -->
+<!-- ARTISTS -->
 <section class="artists">
     <h2>Artists</h2>
 
     <div class="artist-grid">
         <div class="artist-card">
-            <img src="https://via.placeholder.com/260x260?text=Artist" />
+            <img src="https://via.placeholder.com/260x260?text=Chea+Butta">
             <h3>Chea Butta</h3>
             <a href="#">View</a>
         </div>
 
         <div class="artist-card">
-            <img src="https://via.placeholder.com/260x260?text=Artist" />
+            <img src="https://via.placeholder.com/260x260?text=Kvng+Swagg">
             <h3>Kvng Swagg</h3>
             <a href="#">View</a>
         </div>
 
         <div class="artist-card">
-            <img src="https://via.placeholder.com/260x260?text=Artist" />
+            <img src="https://via.placeholder.com/260x260?text=New+Talent">
             <h3>New Talent</h3>
             <a href="#">View</a>
         </div>
@@ -269,16 +271,16 @@
 
 <!-- ABOUT -->
 <section class="about">
-    <h2>About TSSE</h2>
+    <h2>About Topshelf Sounds & Ent.</h2>
     <p>
-        Topshelf Sounds & Entertainment is an independent powerhouse designed to elevate artists into legends.
-        We mix ambition with artistry, and turn raw talent into gold.
+        Topshelf Sounds & Ent. is an independent powerhouse dedicated to launching tomorrow’s stars.
+        From artist development to full creative strategy, we turn raw talent into gold.
     </p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-    <p>© 2025 Topshelf Sounds & Entertainment — All Rights Reserved</p>
+    <p>© 2025 Topshelf Sounds & Ent. — All Rights Reserved</p>
 </footer>
 
 </body>
