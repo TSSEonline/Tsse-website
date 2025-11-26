@@ -7,14 +7,18 @@
 
     <style>
         /* --------------------------------------
-           GLOBAL STYLES & TYPOGRAPHY
+           GLOBAL STYLES & TYPOGRAPHY (LIGHT MODE)
            -------------------------------------- */
         body {
             margin: 0;
             padding: 0;
-            background: #111111; /* Dark background for dramatic effect */
-            font-family: Avenir, Helvetica, sans-serif; /* Modern font stack */
-            color: #ffffff; /* Light text color */
+            background: #f7f7f7;
+            font-family: Avenir, Helvetica, sans-serif;
+            color: #333333;
+        }
+
+        h1, h2, h3 {
+            color: #1a1a1a;
         }
 
         /* --------------------------------------
@@ -22,100 +26,184 @@
            -------------------------------------- */
         header {
             text-align: center;
-            padding: 50px 20px 30px;
+            padding: 40px 20px 20px;
         }
 
         header img {
-            width: 250px;
+            width: 200px;
             max-width: 80%;
         }
 
         h1 {
-            font-size: 3.5rem; /* Larger, bolder title */
-            margin-top: 20px;
-            letter-spacing: 2px;
-            font-weight: 900;
+            font-size: 2.8rem;
+            margin-top: 15px;
+            letter-spacing: 1px;
+            font-weight: 700;
         }
 
         /* --------------------------------------
            NAVIGATION
            -------------------------------------- */
         nav {
-            background: #000;
+            background: #ffffff;
             padding: 15px 0;
             text-align: center;
-            border-top: 1px solid #FFC107; /* Accent border */
-            border-bottom: 1px solid #FFC107;
+            border-top: 1px solid #eeeeee;
+            border-bottom: 3px solid #FFC107;
         }
 
         nav a {
-            color: #FFC107; /* Gold accent color for links */
+            color: #333333;
             text-decoration: none;
             margin: 0 25px;
-            font-size: 1.15rem;
-            font-weight: bold;
+            font-size: 1.05rem;
+            font-weight: 600;
             transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #fff; /* White on hover */
+            color: #FFC107;
         }
 
         /* --------------------------------------
-           HERO SECTION
+           HERO SECTION (WITH BACKGROUND IMAGE)
            -------------------------------------- */
         .hero {
-            padding: 120px 20px; /* Increased vertical padding for 'white space' */
+            /* Set a minimum height for the hero area */
+            min-height: 450px; 
+            padding: 100px 20px;
             text-align: center;
+            
+            /* Background Image Properties: UPDATED FILENAME */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('Hero background .JPG'); /* <--- FILENAME UPDATED HERE */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        /* Override hero text color to white for contrast against the dark overlay */
+        .hero h2, .hero p {
+            color: #ffffff; 
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
         }
 
         .hero h2 {
-            font-size: 3.0rem; /* Bolder sub-headline */
-            font-weight: 900;
-            margin-bottom: 20px;
-            color: #FFC107; /* Gold accent color */
+            font-size: 2.6rem; 
+            font-weight: 800;
+            margin-bottom: 25px;
         }
 
         .hero p {
-            font-size: 1.35rem; 
-            max-width: 750px; 
-            margin: 0 auto 40px auto; /* Added space below paragraph */
-            line-height: 1.5;
-            font-weight: 300; 
+            font-size: 1.25rem; 
+            max-width: 700px; 
+            margin: 0 auto 30px auto; 
+            line-height: 1.6;
+            font-weight: 400; 
         }
 
         /* --------------------------------------
-           CALL TO ACTION BUTTON (CTA)
+           CALL TO ACTION BUTTON (CTA) - Sophisticated Gold
            -------------------------------------- */
         .cta-button {
             display: inline-block;
-            background-color: #FFC107; /* Gold background */
-            color: #000; /* Black text for high contrast */
+            background-color: #FFC107;
+            color: #1a1a1a;
             text-decoration: none;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: bold;
-            padding: 15px 35px;
-            border-radius: 5px;
+            padding: 12px 30px;
+            border-radius: 50px;
             letter-spacing: 0.5px;
-            transition: background-color 0.3s, transform 0.1s;
+            transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .cta-button:hover {
-            background-color: #ffffff; /* Lighter hover effect */
-            transform: translateY(-2px); /* Subtle lift on hover */
-            color: #111;
+            background-color: #ffd740;
+            transform: translateY(-2px); 
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* --------------------------------------
+           ARTIST ROSTER SECTION (Clean Grid)
+           -------------------------------------- */
+        .artist-roster {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .artist-roster h2 {
+            font-size: 2.2rem;
+            color: #1a1a1a;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .artist-grid {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center;
+            gap: 30px; 
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .artist-card {
+            background-color: #f7f7f7;
+            border: 1px solid #e0e0e0;
+            width: 250px; 
+            min-height: 160px;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+        }
+
+        .artist-card:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .artist-card h3 {
+            font-size: 1.4rem;
+            color: #FFC107; 
+            margin: 10px 0 15px 0;
+            text-transform: capitalize;
+            letter-spacing: 0;
+        }
+
+        .artist-card a {
+            display: inline-block;
+            color: #333333;
+            text-decoration: none;
+            border: 2px solid #FFC107;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .artist-card a:hover {
+            background-color: #FFC107;
+            color: #1a1a1a;
         }
 
         /* --------------------------------------
            FOOTER
            -------------------------------------- */
         footer {
-            margin-top: 60px;
-            background: #000;
+            margin-top: 0;
+            background: #ffffff;
             color: #999; 
             text-align: center;
             padding: 20px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            border-top: 1px solid #eeeeee;
         }
     </style>
 </head>
@@ -137,16 +225,53 @@
     </nav>
 
     <section class="hero">
-        <h2>Where Stars Are Born</h2>
+        <h2>Where Creativity Meets Culture.</h2>
         <p>
             Discover new talent, explore our artists, and step into the world of 
-            Topshelf Sounds & Ent. We build futures, shape culture, and create moments 
-            that echo far beyond the speakers.
+            Topshelf Sounds & Ent. We are building the future of sound—shaping culture and creating
+            moments that echo far beyond the speakers.
         </p>
         
         <a href="releases.html" class="cta-button">
             🎧 Listen To Our Latest Releases
         </a>
+    </section>
+
+    <section class="artist-roster">
+        <h2>Meet The Roster</h2>
+        <div class="artist-grid">
+            
+            <div class="artist-card">
+                <h3>Ty Topshelf</h3>
+                <a href="artists.html#tytopshelf">View Profile</a>
+            </div>
+
+            <div class="artist-card">
+                <h3>Chea Butta</h3>
+                <a href="artists.html#cheabutta">View Profile</a>
+            </div>
+
+            <div class="artist-card">
+                <h3>Kvng Swagg</h3>
+                <a href="artists.html#kvngswagg">View Profile</a>
+            </div>
+
+            <div class="artist-card">
+                <h3>Killah Dae</h3>
+                <a href="artists.html#killahdae">View Profile</a>
+            </div>
+
+            <div class="artist-card">
+                <h3>C Fettie</h3>
+                <a href="artists.html#cfettie">View Profile</a>
+            </div>
+
+            <div class="artist-card">
+                <h3>Pyruu DaVixen</h3>
+                <a href="artists.html#pyruudavixen">View Profile</a>
+            </div>
+
+        </div>
     </section>
 
     <footer>
