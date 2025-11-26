@@ -1,35 +1,351 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>TSSE Artists</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { margin:0; background:#000; color:#fff; font-family:Arial,sans-serif; text-align:center; }
-    h1 { color:gold; margin-top:30px; }
-    .nav a { display:inline-block; margin:10px 15px; color:gold; font-size:18px; text-decoration:none; }
-    .artist { margin-top:40px; }
-    .artist img { width:200px; border-radius:10px; border:2px solid gold; }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Topshelf Sounds & Ent. | Artists</title>
+    
+    <style>
+        /* --------------------------------------
+           GLOBAL STYLES & TYPOGRAPHY (LIGHT MODE)
+           -------------------------------------- */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f7f7f7;
+            font-family: Avenir, Helvetica, sans-serif;
+            color: #333333;
+        }
+
+        h1, h2, h3 {
+            color: #1a1a1a;
+        }
+
+        /* --------------------------------------
+           HEADER & LOGO (Copy from Homepage)
+           -------------------------------------- */
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+
+        header img {
+            width: 200px;
+            max-width: 80%;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-top: 15px;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        /* --------------------------------------
+           NAVIGATION (Copy from Homepage)
+           -------------------------------------- */
+        nav {
+            background: #ffffff;
+            padding: 15px 0;
+            text-align: center;
+            border-top: 1px solid #eeeeee;
+            border-bottom: 3px solid #FFC107;
+        }
+
+        nav a {
+            color: #333333;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FFC107;
+        }
+
+        /* --------------------------------------
+           PAGE SPECIFIC STYLES: ARTIST PROFILES
+           -------------------------------------- */
+        .artist-list {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .artist-profile {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 60px;
+            padding: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+        
+        .artist-list .artist-profile:first-child {
+            margin-top: 0;
+        }
+
+        .artist-info {
+            flex: 1;
+            padding-right: 40px;
+            min-width: 300px;
+        }
+        
+        /* Artist Name */
+        .artist-profile h2 {
+            font-size: 3.5rem;
+            color: #FFC107;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #eeeeee;
+            padding-bottom: 5px;
+        }
+
+        .artist-profile h3 {
+            font-size: 1.5rem;
+            color: #666;
+            margin-top: 0;
+        }
+
+        .artist-profile p {
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 25px;
+        }
+
+        /* Social Links */
+        .social-links a {
+            color: #1a1a1a;
+            margin-right: 15px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #FFC107;
+        }
+
+        /* Image Gallery */
+        .artist-gallery {
+            width: 40%;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .artist-gallery img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Media Query for Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .artist-profile {
+                flex-direction: column;
+            }
+            .artist-info {
+                padding-right: 0;
+                order: 2;
+            }
+            .artist-gallery {
+                width: 100%;
+                margin-bottom: 30px;
+                order: 1;
+            }
+        }
+        
+        /* --------------------------------------
+           FOOTER (Copy from Homepage)
+           -------------------------------------- */
+        footer {
+            margin-top: 0;
+            background: #ffffff;
+            color: #999; 
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            border-top: 1px solid #eeeeee;
+        }
+    </style>
 </head>
+
 <body>
-  <h1>TSSE Artists</h1>
-  <div class="nav">
-    <a href="index.html">Home</a>
-    <a href="artists.html">Artists</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
 
-  <div class="artist">
-    <img src="chea-butta.png">
-    <h2>Chea Butta</h2>
-    <p>Artist — "Everybody Love Butta"</p>
-  </div>
+    <header>
+        <img src="tsse-logo.png" alt="Topshelf Sounds & Ent. Logo" />
+        <h1>Topshelf Sounds & Ent.</h1>
+    </header>
 
-  <div class="artist">
-    <img src="kvng-swagg.png">
-    <h2>Kvng Swagg</h2>
-    <p>Artist — "Ballin", "Millions"</p>
-  </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="artists.html">Artists</a>
+        <a href="releases.html">Releases</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="artist-list">
+        
+        <div class="artist-profile" id="cheabutta">
+            <div class="artist-gallery">
+                <img src="Butta performing .JPG" alt="Chea Butta Live Performance" />
+                <img src="Butta cover .JPG" alt="Chea Butta Album Art" />
+            </div>
+            <div class="artist-info">
+                <h2>CHEA BUTTA</h2>
+                <h3>The Voice of the Block</h3>
+                <p>
+                    **Chea Butta** is a powerhouse vocalist and lyricist known for her raw, unfiltered street narratives and powerful delivery. Blending hard-hitting trap beats with introspective storytelling, she captures the realities of urban life with uncompromising honesty. Her breakthrough track, "Block Talk," established her as an undeniable force in the underground scene.
+                </p>
+                <p>
+                    A true artist of the Topshelf brand, Chea Butta doesn't just rap—she speaks for a generation. Her highly anticipated debut album, *Everybody Love Butta*, showcases her versatility and lyrical prowess, proving she is much more than just a rapper; she is a movement.
+                </p>
+                <div class="social-links">
+                    <a href="#cheabutta_spotify" target="_blank">Listen on Spotify</a>
+                    <a href="#cheabutta_instagram" target="_blank">Instagram</a>
+                    <a href="#cheabutta_youtube" target="_blank">YouTube</a>
+                </div>
+                <p style="margin-top: 20px;">
+                    **Next Event:** Live in Atlanta, GA - January 25th
+                </p>
+            </div>
+        </div>
+        
+        <div class="artist-profile" id="tytopshelf">
+            <div class="artist-gallery">
+                <img src="Ty photo.JPG" alt="Ty Topshelf Portrait" />
+                <img src="WE lit cover.JPG" alt="Ty Topshelf Featured on We Lit" />
+            </div>
+            <div class="artist-info">
+                <h2>TY TOPSHELF</h2>
+                <h3>The Architect of Sound</h3>
+                <p>
+                    As a founding figure of Topshelf Sounds & Ent., **Ty Topshelf** is both a gifted artist and a visionary producer. His sound is defined by sharp lyrical wit and atmospheric, genre-bending production that pushes the boundaries of modern hip-hop. He has been instrumental in shaping the careers of many artists on the label.
+                </p>
+                <p>
+                    Known for his magnetic stage presence and ability to deliver infectious hooks, Ty Topshelf is the pulse of the label, constantly innovating and collaborating to define the next wave of music.
+                </p>
+                <div class="social-links">
+                    <a href="#tytopshelf_spotify" target="_blank">Listen on Spotify</a>
+                    <a href="#tytopshelf_instagram" target="_blank">Instagram</a>
+                    <a href="#tytopshelf_youtube" target="_blank">YouTube</a>
+                </div>
+                <p style="margin-top: 20px;">
+                    **Latest Release:** Featured on C Fettie's "We Lit"
+                </p>
+            </div>
+        </div>
+
+        <div class="artist-profile" id="kvngswagg">
+            <div class="artist-gallery">
+                <img src="Takin da throne cover.JPG" alt="Kvng Swagg Takin' Da Throne" />
+                <img src="Cantsay2much cover.JPG" alt="Kvng Swagg Can't Say Much Cover" />
+            </div>
+            <div class="artist-info">
+                <h2>KVNG SWAGG</h2>
+                <h3>The Crown Prince of Trap</h3>
+                <p>
+                    **Kvng Swagg** commands attention with a regal confidence and delivery that lives up to his name. His music features hard-hitting beats and boastful, yet technically complex, lyricism that chronicles his rise to the top. He represents the new generation of Topshelf royalty, claiming his territory with every release.
+                </p>
+                <p>
+                    With multiple viral tracks under his belt, Kvng Swagg is quickly becoming one of the most streamed artists on the roster, proving his reign is just beginning.
+                </p>
+                <div class="social-links">
+                    <a href="#kvngswagg_spotify" target="_blank">Listen on Spotify</a>
+                    <a href="#kvngswagg_instagram" target="_blank">Instagram</a>
+                    <a href="#kvngswagg_youtube" target="_blank">YouTube</a>
+                </div>
+                <p style="margin-top: 20px;">
+                    **Album Release:** *Takin' Da Throne* now available.
+                </p>
+            </div>
+        </div>
+
+        <div class="artist-profile" id="killahdae">
+            <div class="artist-gallery">
+                <img src="Crash out cover.JPG" alt="Killah Dae Crash Out Cover" />
+            </div>
+            <div class="artist-info">
+                <h2>KILLAH DAE</h2>
+                <h3>The Street Storyteller</h3>
+                <p>
+                    **Killah Dae** delivers gritty, authentic tales straight from the streets. His music is defined by raw honesty, a distinctive gravelly flow, and powerful narration over dark, intense production. He has a unique ability to paint vivid lyrical pictures that resonate deeply with listeners who appreciate genuine street poetry.
+                </p>
+                <p>
+                    A master of collaboration, Killah Dae consistently pushes his boundaries, cementing his reputation as one of the most respected lyricists at Topshelf.
+                </p>
+                <div class="social-links">
+                    <a href="#killahdae_spotify" target="_blank">Listen on Spotify</a>
+                    <a href="#killahdae_instagram" target="_blank">Instagram</a>
+                    <a href="#killahdae_youtube" target="_blank">YouTube</a>
+                </div>
+                <p style="margin-top: 20px;">
+                    **Hit Single:** "Crash Out" (feat. Ty Topshelf)
+                </p>
+            </div>
+        </div>
+
+        <div class="artist-profile" id="cfettie">
+            <div class="artist-gallery">
+                <img src="WE lit cover.JPG" alt="C Fettie We Lit Cover" />
+            </div>
+            <div class="artist-info">
+                <h2>C FETTIE</h2>
+                <h3>The Party Starter</h3>
+                <p>
+                    **C Fettie** brings undeniable energy and infectious rhythms to the Topshelf roster. His music is built for the clubs, known for its high-energy production and charismatic delivery. He is the life of the party, specializing in anthems that demand repeat listens and instant replays.
+                </p>
+                <p>
+                    Whether collaborating with label mates or taking the spotlight solo, C Fettie is guaranteed to turn up the volume and set the mood.
+                </p>
+                <div class="social-links">
+                    <a href="#cfettie_spotify" target="_blank">Listen on Spotify</a>
+                    <a href="#cfettie_instagram" target="_blank">Instagram</a>
+                    <a href="#cfettie_youtube" target="_blank">YouTube</a>
+                </div>
+                <p style="margin-top: 20px;">
+                    **Latest Track:** "We Lit" (feat. Ty Topshelf)
+                </p>
+            </div>
+        </div>
+        
+        <div class="artist-profile" id="pyruudavixen">
+            <div class="artist-gallery">
+                <img src="Pyruu photo.JPG" alt="Pyruu DaVixen Portrait 1" />
+                <img src="Pyruu photo2.JPG" alt="Pyruu DaVixen Portrait 2" />
+            </div>
+            <div class="artist-info">
+                <h2>PYRUU DAVIXEN</h2>
+                <h3>The Enigmatic Force</h3>
+                <p>
+                    **Pyruu DaVixen** is the label's hypnotic presence. Known for her distinctive, smooth flow, enigmatic lyrics, and stunning visual aesthetic, she blends elements of R&B and trap with ease. Her music often explores complex themes with a quiet confidence that demands attention.
+                </p>
+                <p>
+                    Pyruu DaVixen's dual nature—vulnerable yet powerful—makes her one of the most intriguing new voices on the Topshelf lineup.
+                </p>
+                <div class="social-links">
+                    <a href="#pyruudavixen_spotify" target="_blank">Listen on Spotify</a>
+                    <a href="#pyruudavixen_instagram" target="_blank">Instagram</a>
+                    <a href="#pyruudavixen_youtube" target="_blank">YouTube</a>
+                </div>
+                <p style="margin-top: 20px;">
+                    **Coming Soon:** Debut EP announced for Spring 2026.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        © 2025 Topshelf Sounds & Ent. All Rights Reserved.
+    </footer>
+
 </body>
 </html>
