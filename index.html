@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Topshelf Sounds & Ent.</title>
-
+    <title>Topshelf Sounds & Ent. | Home</title>
+    
     <style>
         /* --------------------------------------
-           GLOBAL STYLES & TYPOGRAPHY (LIGHT MODE)
+           GLOBAL STYLES & TYPOGRAPHY
            -------------------------------------- */
         body {
             margin: 0;
@@ -22,7 +22,7 @@
         }
 
         /* --------------------------------------
-           HEADER & LOGO
+           HEADER & LOGO 
            -------------------------------------- */
         header {
             text-align: center;
@@ -42,7 +42,7 @@
         }
 
         /* --------------------------------------
-           NAVIGATION
+           NAVIGATION 
            -------------------------------------- */
         nav {
             background: #ffffff;
@@ -66,144 +66,163 @@
         }
 
         /* --------------------------------------
-           HERO SECTION (WITH BACKGROUND IMAGE)
+           PAGE SPECIFIC STYLES: HERO SECTION
            -------------------------------------- */
-        .hero {
-            /* Set a minimum height for the hero area */
-            min-height: 450px; 
-            padding: 100px 20px;
-            text-align: center;
-            
-            /* Background Image Properties: UPDATED FILENAME */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('Hero background .JPG'); /* <--- FILENAME UPDATED HERE */
+        .hero-section {
+            background-image: url('topshelf-hero.JPG'); /* Ensure this file exists for your hero */
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            height: 500px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            margin-bottom: 50px;
         }
         
-        /* Override hero text color to white for contrast against the dark overlay */
-        .hero h2, .hero p {
-            color: #ffffff; 
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        /* Dark overlay for contrast */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); 
         }
 
-        .hero h2 {
-            font-size: 2.6rem; 
-            font-weight: 800;
-            margin-bottom: 25px;
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            color: #ffffff;
+            padding: 20px;
         }
 
-        .hero p {
-            font-size: 1.25rem; 
-            max-width: 700px; 
-            margin: 0 auto 30px auto; 
-            line-height: 1.6;
-            font-weight: 400; 
+        .hero-content h2 {
+            font-size: 4rem;
+            margin: 0;
+            color: #FFC107; /* Gold accent */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
-        /* --------------------------------------
-           CALL TO ACTION BUTTON (CTA) - Sophisticated Gold
-           -------------------------------------- */
-        .cta-button {
-            display: inline-block;
-            background-color: #FFC107;
+        .hero-content p {
+            font-size: 1.5rem;
+            margin: 10px 0 30px;
+            font-weight: 300;
+        }
+
+        .hero-button {
+            background: #FFC107;
             color: #1a1a1a;
             text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 4px;
             font-size: 1.2rem;
-            font-weight: bold;
-            padding: 12px 30px;
-            border-radius: 50px;
-            letter-spacing: 0.5px;
-            transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .cta-button:hover {
-            background-color: #ffd740;
-            transform: translateY(-2px); 
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-        }
-        
-        /* --------------------------------------
-           ARTIST ROSTER SECTION (Clean Grid)
-           -------------------------------------- */
-        .artist-roster {
-            padding: 80px 20px;
-            text-align: center;
-            background-color: #ffffff;
-        }
-
-        .artist-roster h2 {
-            font-size: 2.2rem;
-            color: #1a1a1a;
-            margin-bottom: 50px;
+            font-weight: 700;
+            transition: background 0.3s;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
-        .artist-grid {
-            display: flex;
-            flex-wrap: wrap; 
-            justify-content: center;
-            gap: 30px; 
+        .hero-button:hover {
+            background: #e6b000;
+        }
+
+        /* --------------------------------------
+           MEET THE ROSTER SECTION (NEW STYLES)
+           -------------------------------------- */
+        .roster-section {
+            padding: 50px 20px;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .roster-section h2 {
+            font-size: 3rem;
+            color: #1a1a1a;
+            margin-bottom: 40px;
+        }
+
+        .roster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+            gap: 30px;
+            justify-content: center;
         }
 
         .artist-card {
-            background-color: #f7f7f7;
-            border: 1px solid #e0e0e0;
-            width: 250px; 
-            min-height: 160px;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
+            background: #ffffff;
+            border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            cursor: pointer;
+            overflow: hidden; /* Ensures image corners are rounded */
+            transition: transform 0.3s ease;
+            text-decoration: none; /* Remove underline from link */
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px; /* Padding for text below image */
         }
 
         .artist-card:hover {
-            transform: translateY(-5px); 
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .artist-card img {
+            width: 100%;
+            height: 200px; /* Fixed height for consistency */
+            object-fit: cover; /* Ensures image covers area without distortion */
+            border-bottom: 3px solid #FFC107; /* Gold accent line below image */
+            margin-bottom: 15px;
         }
 
         .artist-card h3 {
-            font-size: 1.4rem;
-            color: #FFC107; 
-            margin: 10px 0 15px 0;
-            text-transform: capitalize;
-            letter-spacing: 0;
-        }
-
-        .artist-card a {
-            display: inline-block;
-            color: #333333;
-            text-decoration: none;
-            border: 2px solid #FFC107;
-            padding: 8px 18px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .artist-card a:hover {
-            background-color: #FFC107;
+            font-size: 1.5rem;
             color: #1a1a1a;
+            margin: 0;
+            padding: 0 15px;
+        }
+
+        .artist-card .view-profile-button {
+            background: #FFC107;
+            color: #1a1a1a;
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: background 0.3s;
+            display: inline-block; /* Allows padding and margins */
+        }
+
+        .artist-card .view-profile-button:hover {
+            background: #e6b000;
         }
 
         /* --------------------------------------
-           FOOTER
+           FOOTER (Copied from other pages)
            -------------------------------------- */
         footer {
-            margin-top: 0;
+            margin-top: 50px; /* Added margin-top to separate from roster */
             background: #ffffff;
             color: #999; 
             text-align: center;
             padding: 20px;
             font-size: 0.85rem;
             border-top: 1px solid #eeeeee;
+        }
+        
+        /* Mobile adjustment */
+        @media (max-width: 700px) {
+            .hero-content h2 {
+                font-size: 3rem;
+            }
+            .roster-grid {
+                grid-template-columns: 1fr; /* Stack artists on small screens */
+            }
         }
     </style>
 </head>
@@ -212,7 +231,6 @@
 
     <header>
         <img src="tsse-logo.png" alt="Topshelf Sounds & Ent. Logo" />
-
         <h1>Topshelf Sounds & Ent.</h1>
     </header>
 
@@ -224,52 +242,53 @@
         <a href="contact.html">Contact</a>
     </nav>
 
-    <section class="hero">
-        <h2>Where Creativity Meets Culture.</h2>
-        <p>
-            Discover new talent, explore our artists, and step into the world of 
-            Topshelf Sounds & Ent. We are building the future of sound—shaping culture and creating
-            moments that echo far beyond the speakers.
-        </p>
-        
-        <a href="releases.html" class="cta-button">
-            🎧 Listen To Our Latest Releases
-        </a>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2>AUTHENTICITY IS THE HIGHEST FORM OF TALENT</h2>
+            <p>The home of Hip Hop and R&B's most compelling and uncompromising voices.</p>
+            <a href="releases.html" class="hero-button">Hear Our Latest Releases</a>
+        </div>
     </section>
 
-    <section class="artist-roster">
-        <h2>Meet The Roster</h2>
-        <div class="artist-grid">
+    <section class="roster-section">
+        <h2>MEET THE ROSTER</h2>
+        <div class="roster-grid">
             
-            <div class="artist-card">
+            <a href="artists.html#tytopshelf" class="artist-card">
+                <img src="Ty photo.JPG" alt="Ty Topshelf" />
                 <h3>Ty Topshelf</h3>
-                <a href="artists.html#tytopshelf">View Profile</a>
-            </div>
+                <span class="view-profile-button">View Profile</span>
+            </a>
 
-            <div class="artist-card">
+            <a href="artists.html#cheabutta" class="artist-card">
+                <img src="Butta performing .JPG" alt="Chea Butta" />
                 <h3>Chea Butta</h3>
-                <a href="artists.html#cheabutta">View Profile</a>
-            </div>
+                <span class="view-profile-button">View Profile</span>
+            </a>
 
-            <div class="artist-card">
+            <a href="artists.html#kvngswagg" class="artist-card">
+                <img src="Takin da throne cover.JPG" alt="Kvng Swagg" />
                 <h3>Kvng Swagg</h3>
-                <a href="artists.html#kvngswagg">View Profile</a>
-            </div>
+                <span class="view-profile-button">View Profile</span>
+            </a>
 
-            <div class="artist-card">
+            <a href="artists.html#killahdae" class="artist-card">
+                <img src="Crash out cover.JPG" alt="Killah Dae" />
                 <h3>Killah Dae</h3>
-                <a href="artists.html#killahdae">View Profile</a>
-            </div>
+                <span class="view-profile-button">View Profile</span>
+            </a>
 
-            <div class="artist-card">
+            <a href="artists.html#cfettie" class="artist-card">
+                <img src="We lit cover.JPG" alt="C Fettie" />
                 <h3>C Fettie</h3>
-                <a href="artists.html#cfettie">View Profile</a>
-            </div>
+                <span class="view-profile-button">View Profile</span>
+            </a>
 
-            <div class="artist-card">
+            <a href="artists.html#pyruudavixen" class="artist-card">
+                <img src="Pyruu photo.JPG" alt="Pyruu DaVixen" />
                 <h3>Pyruu DaVixen</h3>
-                <a href="artists.html#pyruudavixen">View Profile</a>
-            </div>
+                <span class="view-profile-button">View Profile</span>
+            </a>
 
         </div>
     </section>
