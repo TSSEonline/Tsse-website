@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Topshelf Sounds & Ent. | Releases</title>
+    
+    <style>
+        /* --------------------------------------
+           GLOBAL STYLES & TYPOGRAPHY (LIGHT MODE)
+           -------------------------------------- */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f7f7f7;
+            font-family: Avenir, Helvetica, sans-serif;
+            color: #333333;
+        }
+
+        h1, h2, h3 {
+            color: #1a1a1a;
+        }
+
+        /* --------------------------------------
+           HEADER & LOGO (Copy from Homepage)
+           -------------------------------------- */
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+
+        header img {
+            width: 200px;
+            max-width: 80%;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-top: 15px;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        /* --------------------------------------
+           NAVIGATION (Copy from Homepage)
+           -------------------------------------- */
+        nav {
+            background: #ffffff;
+            padding: 15px 0;
+            text-align: center;
+            border-top: 1px solid #eeeeee;
+            border-bottom: 3px solid #FFC107;
+        }
+
+        nav a {
+            color: #333333;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FFC107;
+        }
+
+        /* --------------------------------------
+           PAGE SPECIFIC STYLES: RELEASES GRID
+           -------------------------------------- */
+        .releases-container {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .releases-grid {
+            display: grid;
+            /* Default: 2 covers per row */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .release-item {
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .release-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .release-item img {
+            width: 100%;
+            aspect-ratio: 1 / 1; /* Ensures perfect square covers */
+            border-radius: 8px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            border: 3px solid #FFC107; /* Gold border accent */
+        }
+        
+        .release-item h3 {
+            font-size: 1.3rem;
+            margin: 15px 0 5px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .release-item p {
+            font-size: 0.95rem;
+            color: #666;
+            margin: 0;
+        }
+
+        /* Media Query for larger screens (3 or 4 covers per row) */
+        @media (min-width: 900px) {
+            .releases-grid {
+                grid-template-columns: repeat(3, 1fr); 
+            }
+        }
+        @media (min-width: 1200px) {
+            .releases-grid {
+                grid-template-columns: repeat(4, 1fr); 
+            }
+        }
+
+        /* --------------------------------------
+           FOOTER (Copy from Homepage)
+           -------------------------------------- */
+        footer {
+            margin-top: 50px;
+            background: #ffffff;
+            color: #999; 
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            border-top: 1px solid #eeeeee;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="tsse-logo.png" alt="Topshelf Sounds & Ent. Logo" />
+        <h1>Topshelf Sounds & Ent.</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="artists.html">Artists</a>
+        <a href="releases.html">Releases</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="releases-container">
+        <h2>Latest & Featured Releases</h2>
+
+        <div class="releases-grid">
+            
+            <a href="artists.html#cheabutta" class="release-item">
+                <img src="Butta cover.JPG" alt="Chea Butta - Everybody Love Butta" />
+                <h3>Everybody Love Butta</h3>
+                <p>Chea Butta</p>
+            </a>
+
+            <a href="artists.html#kvngswagg" class="release-item">
+                <img src="Takin da throne cover.JPG" alt="Kvng Swagg - Takin' Da Throne" />
+                <h3>Takin' Da Throne</h3>
+                <p>Kvng Swagg</p>
+            </a>
+
+            <a href="artists.html#killahdae" class="release-item">
+                <img src="Pain and sacrifice cover.JPG" alt="Killah Dae - Pain and Sacrifice" />
+                <h3>Pain and Sacrifice</h3>
+                <p>Killah Dae</p>
+            </a>
+
+            <a href="artists.html#cfettie" class="release-item">
+                <img src="We lit cover.JPG" alt="C Fettie - We Lit" />
+                <h3>We Lit (Feat. Ty Topshelf)</h3>
+                <p>C Fettie</p>
+            </a>
+            
+            <a href="artists.html#killahdae" class="release-item">
+                <img src="Crash out cover.JPG" alt="Killah Dae - Crash Out" />
+                <h3>Crash Out</h3>
+                <p>Killah Dae feat. Ty Topshelf</p>
+            </a>
+
+            <a href="artists.html#kvngswagg" class="release-item">
+                <img src="Cantsay2much cover.JPG" alt="Kvng Swagg - Can't Say 2 Much" />
+                <h3>Can't Say 2 Much</h3>
+                <p>Kvng Swagg</p>
+            </a>
+
+             <a href="artists.html#killahdae" class="release-item">
+                <img src="Forbes list cover.JPG" alt="Killah Dae - Forbes List" />
+                <h3>Forbes List</h3>
+                <p>Killah Dae</p>
+            </a>
+
+            </div>
+    </section>
+
+    <footer>
+        © 2025 Topshelf Sounds & Ent. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
