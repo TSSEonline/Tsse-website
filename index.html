@@ -1,287 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Topshelf Sounds & Ent.</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Topshelf Sounds & Ent.</title>
 
-<style>
-    body {
-        margin: 0;
-        font-family: 'Arial', sans-serif;
-        background-color: #ffffff;
-        color: #111;
-    }
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            font-family: Arial, sans-serif;
+            color: #111;
+        }
 
-    :root {
-        --tsse-gold: #d4af37;
-        --tsse-chrome: #9f9f9f;
-    }
+        header {
+            text-align: center;
+            padding: 50px 20px 30px;
+        }
 
-    /* HERO */
-    .hero {
-        background: url('https://via.placeholder.com/1600x900/fff/ccc?text=Topshelf+Sounds+%26+Ent') 
-                    no-repeat center/cover;
-        padding: 180px 20px;
-        text-align: center;
-        position: relative;
-        color: #000;
-    }
+        header img {
+            width: 250px;
+            max-width: 80%;
+        }
 
-    .hero-overlay {
-        background: rgba(255,255,255,0.7);
-        position: absolute;
-        top: 0; left: 0;
-        right: 0; bottom: 0;
-    }
+        h1 {
+            font-size: 2.4rem;
+            margin-top: 20px;
+            letter-spacing: 1px;
+        }
 
-    .hero-content {
-        position: relative;
-        z-index: 2;
-    }
+        nav {
+            background: #000;
+            padding: 15px 0;
+            text-align: center;
+        }
 
-    .hero h1 {
-        font-size: 60px;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        color: var(--tsse-gold);
-    }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.15rem;
+            font-weight: bold;
+        }
 
-    .hero p {
-        font-size: 22px;
-        margin-top: 10px;
-        opacity: 0.8;
-    }
+        nav a:hover {
+            opacity: 0.7;
+        }
 
-    .hero-buttons a {
-        padding: 15px 35px;
-        background: var(--tsse-gold);
-        color: #fff;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: bold;
-        border-radius: 6px;
-        margin: 0 10px;
-        transition: 0.3s;
-        display: inline-block;
-    }
+        .hero {
+            padding: 70px 20px;
+            text-align: center;
+        }
 
-    .hero-buttons a:hover {
-        background: #000;
-    }
+        .hero h2 {
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
 
-    /* FEATURED */
-    .featured {
-        padding: 70px 20px;
-        text-align: center;
-    }
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
 
-    .featured h2 {
-        color: #000;
-        font-size: 36px;
-        margin-bottom: 40px;
-        font-weight: 700;
-    }
-
-    .featured-card {
-        max-width: 900px;
-        margin: 0 auto;
-        background: #fff;
-        border-radius: 12px;
-        padding: 30px;
-        display: flex;
-        gap: 25px;
-        flex-wrap: wrap;
-        justify-content: center;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        border: 1px solid #eee;
-    }
-
-    .featured-card img {
-        width: 250px;
-        border-radius: 12px;
-        border: 2px solid var(--tsse-gold);
-    }
-
-    .featured-info h3 {
-        font-size: 28px;
-        margin: 0;
-        color: #000;
-    }
-
-    .featured-info p {
-        margin-top: 10px;
-        max-width: 350px;
-        line-height: 1.5;
-        color: #444;
-    }
-
-    .featured-info a {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 12px 25px;
-        background: var(--tsse-gold);
-        color: #fff;
-        font-weight: bold;
-        border-radius: 6px;
-        text-decoration: none;
-    }
-
-    /* ARTISTS */
-    .artists {
-        background: #fafafa;
-        padding: 70px 20px;
-        text-align: center;
-    }
-
-    .artists h2 {
-        font-size: 36px;
-        color: #000;
-        margin-bottom: 40px;
-    }
-
-    .artist-grid {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 25px;
-    }
-
-    .artist-card {
-        background: #fff;
-        width: 260px;
-        padding: 20px;
-        border-radius: 12px;
-        text-align: center;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-        border: 1px solid #eee;
-    }
-
-    .artist-card img {
-        width: 100%;
-        border-radius: 10px;
-        border: 2px solid var(--tsse-gold);
-    }
-
-    .artist-card h3 {
-        margin-top: 15px;
-        color: #111;
-    }
-
-    .artist-card a {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 10px 20px;
-        background: var(--tsse-gold);
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 6px;
-    }
-
-    /* ABOUT */
-    .about {
-        padding: 80px 20px;
-        text-align: center;
-        background: #fff;
-    }
-
-    .about h2 {
-        color: #000;
-        font-size: 36px;
-        margin-bottom: 20px;
-    }
-
-    .about p {
-        max-width: 700px;
-        margin: 0 auto;
-        line-height: 1.6;
-        color: #444;
-    }
-
-    /* FOOTER */
-    footer {
-        padding: 40px;
-        text-align: center;
-        background: #f4f4f4;
-        border-top: 1px solid #ddd;
-    }
-
-    footer p {
-        color: #666;
-        font-size: 14px;
-    }
-</style>
+        footer {
+            margin-top: 60px;
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 18px;
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
+    <!-- LOGO + TITLE -->
+    <header>
+        <!-- This is your uploaded logo -->
+        <img src="tsse-logo.png" alt="Topshelf Sounds & Ent. Logo" />
+
         <h1>Topshelf Sounds & Ent.</h1>
-        <p>Where Stars Are Born</p>
-        <div class="hero-buttons">
-            <a href="#">View Artists</a>
-            <a href="#">Listen</a>
-        </div>
-    </div>
-</section>
+    </header>
 
-<!-- FEATURED -->
-<section class="featured">
-    <h2>Featured Release</h2>
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="artists.html">Artists</a>
+        <a href="releases.html">Releases</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
-    <div class="featured-card">
-        <img src="https://via.placeholder.com/250x250?text=Chea+Butta" alt="Chea Butta">
-        <div class="featured-info">
-            <h3>Chea Butta — Everybody Love Butta</h3>
-            <p>The new release from Topshelf Sounds & Ent.'s rising star. Stream it everywhere today.</p>
-            <a href="#">Listen Now</a>
-        </div>
-    </div>
-</section>
+    <!-- MAIN HERO SECTION -->
+    <section class="hero">
+        <h2>Where Stars Are Born</h2>
+        <p>
+            Discover new talent, explore our artists, and step into the world of 
+            Topshelf Sounds & Ent. We build futures, shape culture, and create moments 
+            that echo far beyond the speakers.
+        </p>
+    </section>
 
-<!-- ARTISTS -->
-<section class="artists">
-    <h2>Artists</h2>
-
-    <div class="artist-grid">
-        <div class="artist-card">
-            <img src="https://via.placeholder.com/260x260?text=Chea+Butta">
-            <h3>Chea Butta</h3>
-            <a href="#">View</a>
-        </div>
-
-        <div class="artist-card">
-            <img src="https://via.placeholder.com/260x260?text=Kvng+Swagg">
-            <h3>Kvng Swagg</h3>
-            <a href="#">View</a>
-        </div>
-
-        <div class="artist-card">
-            <img src="https://via.placeholder.com/260x260?text=New+Talent">
-            <h3>New Talent</h3>
-            <a href="#">View</a>
-        </div>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about">
-    <h2>About Topshelf Sounds & Ent.</h2>
-    <p>
-        Topshelf Sounds & Ent. is an independent powerhouse dedicated to launching tomorrow’s stars.
-        From artist development to full creative strategy, we turn raw talent into gold.
-    </p>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <p>© 2025 Topshelf Sounds & Ent. — All Rights Reserved</p>
-</footer>
+    <!-- FOOTER -->
+    <footer>
+        © 2025 Topshelf Sounds & Ent. All Rights Reserved.
+    </footer>
 
 </body>
 </html>
