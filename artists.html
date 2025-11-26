@@ -7,7 +7,7 @@
     
     <style>
         /* --------------------------------------
-           GLOBAL STYLES & TYPOGRAPHY (LIGHT MODE)
+           GLOBAL STYLES (Copied from index.html)
            -------------------------------------- */
         body {
             margin: 0;
@@ -22,7 +22,7 @@
         }
 
         /* --------------------------------------
-           HEADER & LOGO (Copy from Homepage)
+           HEADER & NAVIGATION (Copied from index.html)
            -------------------------------------- */
         header {
             text-align: center;
@@ -41,9 +41,6 @@
             font-weight: 700;
         }
 
-        /* --------------------------------------
-           NAVIGATION (Copy from Homepage)
-           -------------------------------------- */
         nav {
             background: #ffffff;
             padding: 15px 0;
@@ -68,103 +65,131 @@
         /* --------------------------------------
            PAGE SPECIFIC STYLES: ARTIST PROFILES
            -------------------------------------- */
-        .artist-list {
+        .artist-container {
             padding: 50px 20px;
             max-width: 1000px;
             margin: 0 auto;
         }
 
+        .artist-container h2.page-title {
+            font-size: 3rem;
+            color: #FFC107;
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 2px solid #eeeeee;
+            padding-bottom: 10px;
+        }
+
         .artist-profile {
             background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            margin-bottom: 60px;
-            padding: 40px;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-start;
-        }
-        
-        .artist-list .artist-profile:first-child {
-            margin-top: 0;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
         }
 
-        .artist-info {
-            flex: 1;
-            padding-right: 40px;
-            min-width: 300px;
-        }
-        
-        .artist-profile h2 {
-            font-size: 3.5rem;
-            color: #FFC107;
-            margin-bottom: 10px;
-            border-bottom: 3px solid #eeeeee;
-            padding-bottom: 5px;
-        }
-
-        .artist-profile h3 {
-            font-size: 1.5rem;
-            color: #666;
-            margin-top: 0;
-        }
-
-        .artist-profile p {
-            line-height: 1.7;
-            font-size: 1rem;
-            margin-bottom: 25px;
-        }
-
-        /* Social Links */
-        .social-links a {
+        .artist-header h2 {
+            font-size: 2.2rem;
             color: #1a1a1a;
-            margin-right: 15px;
-            font-size: 1.1rem;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
+            margin-top: 0;
+            margin-bottom: 5px;
         }
 
-        .social-links a:hover {
-            color: #FFC107;
+        .artist-header .genre {
+            display: block;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 20px;
         }
 
-        /* Image Gallery */
+        .artist-about p {
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        /* --- NEW: Style for Chea Butta's Album Highlight --- */
+        .album-highlight { 
+            background-color: #f5f0ff; 
+            border-left: 4px solid #FFC107;
+            padding: 20px; 
+            margin: 25px 0;
+            font-style: italic;
+            border-radius: 4px;
+        }
+        /* ------------------------------------------------ */
+
         .artist-gallery {
-            width: 40%;
-            min-width: 250px;
             display: flex;
-            flex-direction: column;
-            gap: 20px;
+            gap: 15px;
+            margin-bottom: 25px;
         }
 
         .artist-gallery img {
             width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Media Query for Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .artist-profile {
-                flex-direction: column;
-            }
-            .artist-info {
-                padding-right: 0;
-                order: 2;
-            }
-            .artist-gallery {
-                width: 100%;
-                margin-bottom: 30px;
-                order: 1;
-            }
+            max-width: 250px;
+            height: auto;
+            border-radius: 4px;
+            object-fit: cover;
+            border: 1px solid #ddd;
         }
         
+        .artist-social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        .social-button:hover {
+            opacity: 0.8;
+        }
+        
+        .social-button .icon {
+            margin-right: 8px;
+            font-size: 1.1em;
+        }
+
+        .spotify { background: #1DB954; }
+        .instagram { background: #E1306C; }
+        .youtube { background: #FF0000; }
+
+
+        /* Responsive Layout */
+        @media (min-width: 768px) {
+            .artist-profile {
+                grid-template-columns: 2fr 1fr; /* Text on left, Gallery on right */
+            }
+            .artist-gallery {
+                flex-direction: column;
+                justify-content: start;
+                align-items: flex-end; /* Align images to the right */
+            }
+            .artist-gallery img {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
         /* --------------------------------------
-           FOOTER (Copy from Homepage)
+           FOOTER (Copied from index.html)
            -------------------------------------- */
         footer {
-            margin-top: 0;
+            margin-top: 50px;
             background: #ffffff;
             color: #999; 
             text-align: center;
@@ -190,158 +215,187 @@
         <a href="contact.html">Contact</a>
     </nav>
 
-    <section class="artist-list">
+    <section class="artist-container">
+        <h2 class="page-title">Topshelf Roster</h2>
+
+        <section class="artist-profile" id="tytopshelf">
+            <div class="artist-header">
+                <h2>Ty Topshelf</h2>
+                <span class="genre">Hip Hop</span>
+            </div>
         
-        <div class="artist-profile" id="cheabutta">
+            <div class="artist-about">
+                <p>Ty Topshelf is a founding pillar of the Topshelf Sounds & Ent. label, embodying the "authenticity first" philosophy. Known for his introspective lyrics, street-tested wisdom, and smooth delivery, Ty consistently raises the bar for lyricism in the modern Hip Hop era.</p>
+                <p>His work often explores the hustle, success, and the reality of life in the digital age, resonating deeply with fans who appreciate his raw and uncompromising perspective. Ty Topshelf is not just an artist; he is a voice of authority in the scene, shaping the sound of the label with every release.</p>
+            </div>
+            
             <div class="artist-gallery">
-                <img src="Butta performing .JPG" alt="Chea Butta Live Performance" />
+                <img src="Ty photo.JPG" alt="Ty Topshelf profile shot">
+                <img src="We lit cover.JPG" alt="We Lit album cover">
+            </div>
+
+            <div class="artist-social-links">
+                <a href="http://googleusercontent.com/spotify.com/3" target="_blank" class="social-button spotify">
+                    <span class="icon">🎧</span> Listen on Spotify
+                </a>
+                <a href="https://www.instagram.com/ty_topshelf_/" target="_blank" class="social-button instagram">
+                    <span class="icon">📸</span> Follow on Instagram
+                </a>
+                <a href="https://www.youtube.com/channel/YOUR-TY-YOUTUBE-ID" target="_blank" class="social-button youtube">
+                    <span class="icon">▶️</span> Watch on YouTube
+                </a>
+            </div>
+        </section>
+
+        <section class="artist-profile" id="cheabutta">
+            <div class="artist-header">
+                <h2>Chea Butta</h2>
+                <span class="genre">Hip Hop / R&B</span>
+            </div>
+
+            <div class="artist-about">
+                <p>Chea Butta is a magnetic force in the hip-hop scene, captivating audiences with her raw lyricism and undeniable charisma. <strong>Originating from Norfolk, Virginia</strong>, Chea Butta has carved out a unique space for herself by blending gritty narratives with catchy, confident beats.</p>
+
+                <div class="album-highlight">
+                    <p>The spotlight is currently on Chea Butta with the release of her highly anticipated new album, <strong>“Everybody Love Butta.”</strong> The project is a vibrant testament to her growth as an artist, showcasing a diverse range of tracks that explore themes of ambition, life in the city, and unapologetic self-love. Critics and fans alike are praising the album for its tight production and Chea Butta’s most complex and compelling verses to date. <strong>“Everybody Love Butta”</strong> is a definitive statement that solidifies her position as an essential voice in contemporary music.</p>
+                </div>
                 
-                <img src="Butta cover.JPG" alt="Chea Butta Album Art" /> 
+                <p>Known for her dynamic stage presence and ability to connect instantly with her audience, Chea Butta continues to build a fiercely loyal following. Her dedication to her craft and her authentic storytelling promise a long and impactful career. Keep an eye on Chea Butta—she's not just making music; she's setting the new standard.</p>
             </div>
-            <div class="artist-info">
-                <h2>CHEA BUTTA</h2>
-                <h3>The Voice of the Block</h3>
-                <p>
-                    Chea Butta is a powerhouse vocalist and lyricist known for her raw, unfiltered street narratives and powerful delivery. Blending hard-hitting trap beats with introspective storytelling, she captures the realities of urban life with uncompromising honesty. Her breakthrough track, "Block Talk," established her as an undeniable force in the underground scene.
-                </p>
-                <p>
-                    A true artist of the Topshelf brand, Chea Butta doesn't just rap—she speaks for a generation. Her highly anticipated debut album, *Everybody Love Butta*, showcases her versatility and lyrical prowess, proving she is much more than just a rapper; she is a movement.
-                </p>
-                <div class="social-links">
-                    <a href="#cheabutta_spotify" target="_blank">Listen on Spotify</a>
-                    <a href="#cheabutta_instagram" target="_blank">Instagram</a>
-                    <a href="#cheabutta_youtube" target="_blank">YouTube</a>
-                </div>
-                <p style="margin-top: 20px;">
-                    **Next Event:** Live in Atlanta, GA - January 25th
-                </p>
+
+            <div class="artist-gallery">
+                <img src="Butta performing .JPG" alt="Chea Butta performing live">
+                <img src="Butta cover .JPG" alt="Everybody Love Butta album cover">
             </div>
-        </div>
+
+            <div class="artist-social-links">
+                <a href="http://googleusercontent.com/spotify.com/4" target="_blank" class="social-button spotify">
+                    <span class="icon">🎧</span> Listen on Spotify
+                </a>
+                <a href="https://www.instagram.com/YOUR-BUTTA-INSTAGRAM" target="_blank" class="social-button instagram">
+                    <span class="icon">📸</span> Follow on Instagram
+                </a>
+                <a href="https://www.youtube.com/channel/YOUR-BUTTA-YOUTUBE-ID" target="_blank" class="social-button youtube">
+                    <span class="icon">▶️</span> Watch on YouTube
+                </a>
+            </div>
+        </section>
         
-        <div class="artist-profile" id="tytopshelf">
-            <div class="artist-gallery">
-                <img src="Ty photo.JPG" alt="Ty Topshelf Portrait" />
-                <img src="We lit cover.JPG" alt="Ty Topshelf Featured on We Lit" />
+        <section class="artist-profile" id="kvngswagg">
+            <div class="artist-header">
+                <h2>Kvng Swagg</h2>
+                <span class="genre">Hip Hop</span>
             </div>
-            <div class="artist-info">
-                <h2>TY TOPSHELF</h2>
-                <h3>The Architect of Sound</h3>
-                <p>
-                    As a founding figure of Topshelf Sounds & Ent., Ty Topshelf is both a gifted artist and a visionary producer. His sound is defined by sharp lyrical wit and atmospheric, genre-bending production that pushes the boundaries of modern hip-hop. He has been instrumental in shaping the careers of many artists on the label.
-                </p>
-                <p>
-                    Known for his magnetic stage presence and ability to deliver infectious hooks, Ty Topshelf is the pulse of the label, constantly innovating and collaborating to define the next wave of music.
-                </p>
-                <div class="social-links">
-                    <a href="#tytopshelf_spotify" target="_blank">Listen on Spotify</a>
-                    <a href="#tytopshelf_instagram" target="_blank">Instagram</a>
-                    <a href="#tytopshelf_youtube" target="_blank">YouTube</a>
-                </div>
-                <p style="margin-top: 20px;">
-                    **Latest Release:** Featured on C Fettie's "We Lit"
-                </p>
-            </div>
-        </div>
-
-        <div class="artist-profile" id="kvngswagg">
-            <div class="artist-gallery">
-                <img src="Takin da throne cover.JPG" alt="Kvng Swagg Takin' Da Throne" />
-                <img src="Cantsay2much cover.JPG" alt="Kvng Swagg Can't Say 2 Much Cover" />
-            </div>
-            <div class="artist-info">
-                <h2>KVNG SWAGG</h2>
-                <h3>The Crown Prince of Trap</h3>
-                <p>
-                    Kvng Swagg commands attention with a regal confidence and delivery that lives up to his name. His music features hard-hitting beats and boastful, yet technically complex, lyricism that chronicles his rise to the top. He represents the new generation of Topshelf royalty, claiming his territory with every release.
-                </p>
-                <p>
-                    With multiple viral tracks under his belt, Kvng Swagg is quickly becoming one of the most streamed artists on the roster, proving his reign is just beginning.
-                </p>
-                <div class="social-links">
-                    <a href="#kvngswagg_spotify" target="_blank">Listen on Spotify</a>
-                    <a href="#kvngswagg_instagram" target="_blank">Instagram</a>
-                    <a href="#kvngswagg_youtube" target="_blank">YouTube</a>
-                </div>
-                <p style="margin-top: 20px;">
-                    **Album Release:** *Takin' Da Throne* now available.
-                </p>
-            </div>
-        </div>
-
-        <div class="artist-profile" id="killahdae">
-            <div class="artist-gallery">
-                <img src="Crash out cover.JPG" alt="Killah Dae Crash Out Cover" />
-                <img src="Pain and sacrifice cover.JPG" alt="Killah Dae Pain and Sacrifice Cover" />
-                <img src="Forbes list cover.JPG" alt="Killah Dae Forbes List Cover" />
-            </div>
-            <div class="artist-info">
-                <h2>KILLAH DAE</h2>
-                <h3>The Street Storyteller</h3>
-                <p>
-                    Killah Dae delivers gritty, authentic tales straight from the streets. His music is defined by raw honesty, a distinctive gravelly flow, and powerful narration over dark, intense production. He has a unique ability to paint vivid lyrical pictures that resonate deeply with listeners who appreciate genuine street poetry.
-                </p>
-                <p>
-                    A master of collaboration, Killah Dae consistently pushes his boundaries, cementing his reputation as one of the most respected lyricists at Topshelf.
-                </p>
-                <div class="social-links">
-                    <a href="#killahdae_spotify" target="_blank">Listen on Spotify</a>
-                    <a href="#killahdae_instagram" target="_blank">Instagram</a>
-                    <a href="#killahdae_youtube" target="_blank">YouTube</a>
-                </div>
-                <p style="margin-top: 20px;">
-                    **Latest Project:** *Pain and Sacrifice* Album
-                </p>
-            </div>
-        </div>
-
-        <div class="artist-profile" id="cfettie">
-            <div class="artist-gallery">
-                <img src="We lit cover.JPG" alt="C Fettie We Lit Cover" />
-            </div>
-            <div class="artist-info">
-                <h2>C FETTIE</h2>
-                <h3>The Party Starter</h3>
-                <p>
-                    C Fettie brings undeniable energy and infectious rhythms to the Topshelf roster. His music is built for the clubs, known for its high-energy production and charismatic delivery. He is the life of the party, specializing in anthems that demand repeat listens and instant replays.
-                </p>
-                <p>
-                    Whether collaborating with label mates or taking the spotlight solo, C Fettie is guaranteed to turn up the volume and set the mood.
-                </p>
-                <div class="social-links">
-                    <a href="#cfettie_spotify" target="_blank">Listen on Spotify</a>
-                    <a href="#cfettie_instagram" target="_blank">Instagram</a>
-                    <a href="#cfettie_youtube" target="_blank">YouTube</a>
-                </div>
-                <p style="margin-top: 20px;">
-                    **Latest Track:** "We Lit" (feat. Ty Topshelf)
-                </p>
-            </div>
-        </div>
         
-        <div class="artist-profile" id="pyruudavixen">
+            <div class="artist-about">
+                <p>Kvng Swagg brings an infectious blend of melodic flow and assertive lyrics to the roster. His music is characterized by trap beats and highly polished production, delivering anthems of confidence and aspiration. Swagg has a knack for crafting memorable hooks that stick with listeners long after the track ends.</p>
+                <p>A true performer, Kvng Swagg's energy translates from the booth to the stage, establishing him as a rising star whose magnetic personality is as crucial to his appeal as his bars.</p>
+            </div>
+
             <div class="artist-gallery">
-                <img src="Pyruu photo.JPG" alt="Pyruu DaVixen Portrait" />
-                <img src="Pyruu photo2.JPG" alt="Pyruu DaVixen Dramatic Portrait" />
+                <img src="Takin da throne cover.JPG" alt="Kvng Swagg Takin da Throne cover">
+                <img src="Can't say Z much cover.JPG" alt="Can't say Z much cover">
             </div>
-            <div class="artist-info">
-                <h2>PYRUU DAVIXEN</h2>
-                <h3>The Enigmatic Force</h3>
-                <p>
-                    Pyruu DaVixen is the label's hypnotic presence. Known for her distinctive, smooth flow, enigmatic lyrics, and stunning visual aesthetic, she blends elements of R&B and trap with ease. Her music often explores complex themes with a quiet confidence that demands attention.
-                </p>
-                <p>
-                    Pyruu DaVixen's dual nature—vulnerable yet powerful—makes her one of the most intriguing new voices on the Topshelf lineup.
-                </p>
-                <div class="social-links">
-                    <a href="#pyruudavixen_spotify" target="_blank">Listen on Spotify</a>
-                    <a href="#pyruudavixen_instagram" target="_blank">Instagram</a>
-                    <a href="#pyruudavixen_youtube" target="_blank">YouTube</a>
-                </div>
-                <p style="margin-top: 20px;">
-                    **Coming Soon:** Debut EP announced for Spring 2026.
-                </p>
+            
+            <div class="artist-social-links">
+                <a href="http://googleusercontent.com/spotify.com/5" target="_blank" class="social-button spotify">
+                    <span class="icon">🎧</span> Listen on Spotify
+                </a>
+                <a href="https://www.instagram.com/YOUR-KVNGSWAGG-INSTAGRAM" target="_blank" class="social-button instagram">
+                    <span class="icon">📸</span> Follow on Instagram
+                </a>
+                <a href="https://www.youtube.com/channel/YOUR-KVNGSWAGG-YOUTUBE-ID" target="_blank" class="social-button youtube">
+                    <span class="icon">▶️</span> Watch on YouTube
+                </a>
             </div>
-        </div>
+        </section>
+
+        <section class="artist-profile" id="killahdae">
+            <div class="artist-header">
+                <h2>Killah Dae</h2>
+                <span class="genre">Hip Hop</span>
+            </div>
+        
+            <div class="artist-about">
+                <p>Killah Dae is known for his rugged, uncompromising street tales and heavy, bass-driven sound. He is a powerhouse of raw talent, offering listeners an authentic, unfiltered glimpse into his world. His collaborations, including the breakout track "Crash Out" featuring Ty Topshelf, showcase his versatility and ability to dominate any track.</p>
+                <p>Dae's dedication to his lyrical precision and his intense delivery make him one of the most respected voices on the Topshelf roster, focused on providing truth through his music.</p>
+            </div>
+
+            <div class="artist-gallery">
+                <img src="Crash out cover.JPG" alt="Killah Dae Crash Out cover">
+                <img src="Killah Dae photo.JPG" alt="Killah Dae profile shot">
+            </div>
+            
+            <div class="artist-social-links">
+                <a href="http://googleusercontent.com/spotify.com/6" target="_blank" class="social-button spotify">
+                    <span class="icon">🎧</span> Listen on Spotify
+                </a>
+                <a href="https://www.instagram.com/YOUR-KILLAHDAE-INSTAGRAM" target="_blank" class="social-button instagram">
+                    <span class="icon">📸</span> Follow on Instagram
+                </a>
+                <a href="https://www.youtube.com/channel/YOUR-KILLAHDAE-YOUTUBE-ID" target="_blank" class="social-button youtube">
+                    <span class="icon">▶️</span> Watch on YouTube
+                </a>
+            </div>
+        </section>
+        
+        <section class="artist-profile" id="cfettie">
+            <div class="artist-header">
+                <h2>C Fettie</h2>
+                <span class="genre">Hip Hop</span>
+            </div>
+        
+            <div class="artist-about">
+                <p>C Fettie is an artist who seamlessly blends high-energy trap with witty, introspective verses. Known for his dynamic flow and ability to switch styles mid-track, Fettie is one of the most innovative lyricists at Topshelf. His hit "We Lit" with Ty Topshelf demonstrated his capacity to create undeniable, party-ready anthems.</p>
+                <p>With an eye on legacy, C Fettie focuses on crafting timeless music that captures the energy of the moment while maintaining a high standard of lyrical depth.</p>
+            </div>
+
+            <div class="artist-gallery">
+                <img src="C Fettie photo.JPG" alt="C Fettie profile shot">
+                <img src="We lit cover.JPG" alt="We Lit album cover">
+            </div>
+            
+            <div class="artist-social-links">
+                <a href="http://googleusercontent.com/spotify.com/7" target="_blank" class="social-button spotify">
+                    <span class="icon">🎧</span> Listen on Spotify
+                </a>
+                <a href="https://www.instagram.com/YOUR-CFETTIE-INSTAGRAM" target="_blank" class="social-button instagram">
+                    <span class="icon">📸</span> Follow on Instagram
+                </a>
+                <a href="https://www.youtube.com/channel/YOUR-CFETTIE-YOUTUBE-ID" target="_blank" class="social-button youtube">
+                    <span class="icon">▶️</span> Watch on YouTube
+                </a>
+            </div>
+        </section>
+
+        <section class="artist-profile" id="pyruudavixen">
+            <div class="artist-header">
+                <h2>Pyruu DaVixen</h2>
+                <span class="genre">R&B / Hip Hop</span>
+            </div>
+        
+            <div class="artist-about">
+                <p>Pyruu DaVixen is the dynamic fusion of contemporary R&B smoothness and sharp Hip Hop confidence. Her voice commands attention, offering emotional depth in her ballads and undeniable swagger in her uptempo tracks. Pyruu's music explores themes of female empowerment, self-worth, and modern relationships.</p>
+                <p>A true "Vixen" of the scene, she uses her platform to challenge conventions and promote fearless authenticity, making her a vital part of the Topshelf R&B direction.</p>
+            </div>
+
+            <div class="artist-gallery">
+                <img src="Pyruu photo 1.JPG" alt="Pyruu DaVixen profile shot">
+                <img src="Pyruu photo 2.JPG" alt="Pyruu DaVixen alternate shot">
+            </div>
+            
+            <div class="artist-social-links">
+                <a href="http://googleusercontent.com/spotify.com/8" target="_blank" class="social-button spotify">
+                    <span class="icon">🎧</span> Listen on Spotify
+                </a>
+                <a href="https://www.instagram.com/YOUR-PYRUU-INSTAGRAM" target="_blank" class="social-button instagram">
+                    <span class="icon">📸</span> Follow on Instagram
+                </a>
+                <a href="https://www.youtube.com/channel/YOUR-PYRUU-YOUTUBE-ID" target="_blank" class="social-button youtube">
+                    <span class="icon">▶️</span> Watch on YouTube
+                </a>
+            </div>
+        </section>
 
     </section>
 
