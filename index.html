@@ -1,155 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Topshelf Sounds & Ent.</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Topshelf Sounds & Ent. | Home</title>
+    
+    <style>
+        /* --------------------------------------
+           GLOBAL STYLES & TYPOGRAPHY
+           -------------------------------------- */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f7f7f7;
+            font-family: Avenir, Helvetica, sans-serif;
+            color: #333333;
+        }
+
+        h1, h2, h3 {
+            color: #1a1a1a;
+        }
+
+        /* --------------------------------------
+           HEADER & LOGO 
+           -------------------------------------- */
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+
+        header img {
+            width: 200px;
+            max-width: 80%;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-top: 15px;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        /* --------------------------------------
+           NAVIGATION 
+           -------------------------------------- */
+        nav {
+            background: #ffffff;
+            padding: 15px 0;
+            text-align: center;
+            border-top: 1px solid #eeeeee;
+            border-bottom: 3px solid #FFC107;
+        }
+
+        nav a {
+            color: #333333;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FFC107;
+        }
+
+        /* --------------------------------------
+           PAGE SPECIFIC STYLES: HERO SECTION
+           -------------------------------------- */
+        .hero-section {
+            background-image: url('Hero background .JPG'); 
+            background-size: cover;
+            background-position: center;
+            height: 500px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            margin-bottom: 50px;
+        }
+        
+        /* Dark overlay for contrast */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); 
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        .hero-content h2 {
+            font-size: 4rem;
+            margin: 0;
+            color: #FFC107; /* Gold accent */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin: 10px 0 30px;
+            font-weight: 300;
+        }
+
+        .hero-button {
+            background: #FFC107;
+            color: #1a1a1a;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            transition: background 0.3s;
+            text-transform: uppercase;
+        }
+
+        .hero-button:hover {
+            background: #e6b000;
+        }
+
+        /* --------------------------------------
+           MEET THE ROSTER SECTION
+           -------------------------------------- */
+        .roster-section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .roster-section h2 {
+            font-size: 3rem;
+            color: #1a1a1a;
+            margin-bottom: 40px;
+        }
+
+        .roster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .artist-card {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            overflow: hidden; /* Ensures image corners are rounded */
+            transition: transform 0.3s ease;
+            text-decoration: none; /* Remove underline from link */
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px; /* Padding for text below image */
+        }
+
+        .artist-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .artist-card img {
+            width: 100%;
+            height: 200px; /* Fixed height for consistency */
+            object-fit: cover; /* Ensures image covers area without distortion */
+            border-bottom: 3px solid #FFC107; /* Gold accent line below image */
+            margin-bottom: 15px;
+        }
+
+        .artist-card h3 {
+            font-size: 1.5rem;
+            color: #1a1a1a;
+            margin: 0;
+            padding: 0 15px;
+        }
+
+        .artist-card .view-profile-button {
+            background: #FFC107;
+            color: #1a1a1a;
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: background 0.3s;
+            display: inline-block; /* Allows padding and margins */
+        }
+
+        .artist-card .view-profile-button:hover {
+            background: #e6b000;
+        }
+
+        /* --------------------------------------
+           FOOTER (Updated for social link)
+           -------------------------------------- */
+        footer {
+            margin-top: 50px; 
+            background: #ffffff;
+            color: #999; 
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            border-top: 1px solid #eeeeee;
+        }
+
+        .footer-links a {
+            color: #555;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+
+        .footer-links a:hover {
+            color: #FFC107;
+        }
+        
+        /* Mobile adjustment */
+        @media (max-width: 700px) {
+            .hero-content h2 {
+                font-size: 3rem;
+            }
+            .roster-grid {
+                grid-template-columns: 1fr; /* Stack artists on small screens */
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
     <header>
-        <img src="logo.png" class="logo" alt="Topshelf Logo">
-        <nav>
-            <a href="#artists">Artists</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <img src="tsse-logo.png" alt="Topshelf Sounds & Ent. Logo" />
+        <h1>Topshelf Sounds & Ent.</h1>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <h1>Topshelf Sounds & Ent.</h1>
-        <p>Where Stars Are Born</p>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="artists.html">Artists</a>
+        <a href="releases.html">Releases</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2>AUTHENTICITY IS THE HIGHEST FORM OF TALENT</h2>
+            <p>The home of Hip Hop and R&B's most compelling and uncompromising voices.</p>
+            <a href="releases.html" class="hero-button">Hear Our Latest Releases</a>
+        </div>
     </section>
 
-    <!-- ARTISTS SECTION -->
-    <section id="artists" class="artists-section">
-        <h2>Our Artists</h2>
+    <section class="roster-section">
+        <h2>MEET THE ROSTER</h2>
+        <div class="roster-grid">
+            
+            <a href="artists.html#tytopshelf" class="artist-card">
+                <img src="Ty photo.JPG" alt="Ty Topshelf" />
+                <h3>Ty Topshelf</h3>
+                <span class="view-profile-button">View Profile</span>
+            </a>
 
-        <!-- Chea Butta -->
-        <div class="artist-card">
-            <img src="chea.jpg" alt="Chea Butta">
-            <h3>Chea Butta</h3>
-            <p class="bio">
-                Chea Butta brings charisma, pressure, and undeniable Southern charm straight out of Portsmouth, VA.
-                His sound blends heartfelt storytelling with gritty, melodic energy, carving out a lane where raw truth
-                meets star-quality presence. His album <b>Everybody Love Butta</b> continues to build heavy traction,
-                backed by a fanbase that grows louder by the day.
-            </p>
+            <a href="artists.html#cheabutta" class="artist-card">
+                <img src="Butta performing .JPG" alt="Chea Butta" />
+                <h3>Chea Butta</h3>
+                <span class="view-profile-button">View Profile</span>
+            </a>
 
-            <div class="links">
-                <a href="https://open.spotify.com/album/73FRxINOthxKKLLpcQ7WOl?si=Q7pEZxytSricbV7o8kRfSg" target="_blank">Spotify</a>
-                <a href="https://youtu.be/0WfTASi_nFo?si=tLnjCUIAwTCmRNR_" target="_blank">YouTube</a>
-                <a href="https://www.instagram.com/chea_butta?igsh=MWZxOXVobTd3ejEyYQ==" target="_blank">Instagram</a>
-            </div>
+            <a href="artists.html#kvngswagg" class="artist-card">
+                <img src="Takin da throne cover.JPG" alt="Kvng Swagg" />
+                <h3>Kvng Swagg</h3>
+                <span class="view-profile-button">View Profile</span>
+            </a>
+
+            <a href="artists.html#killahdae" class="artist-card">
+                <img src="Crash out cover.JPG" alt="Killah Dae" />
+                <h3>Killah Dae</h3>
+                <span class="view-profile-button">View Profile</span>
+            </a>
+
+            <a href="artists.html#cfettie" class="artist-card">
+                <img src="We lit cover.JPG" alt="C Fettie" />
+                <h3>C Fettie</h3>
+                <span class="view-profile-button">View Profile</span>
+            </a>
+
+            <a href="artists.html#pyruudavixen" class="artist-card">
+                <img src="Pyruu photo.JPG" alt="Pyruu DaVixen" />
+                <h3>Pyruu DaVixen</h3>
+                <span class="view-profile-button">View Profile</span>
+            </a>
+
         </div>
-
-        <!-- Kvng Swagg -->
-        <div class="artist-card">
-            <img src="swagg.jpg" alt="Kvng Swagg">
-            <h3>Kvng Swagg</h3>
-            <p class="bio">
-                Kvng Swagg delivers a confident, hard-hitting presence with a sound built on championship energy.
-                Known for records like <b>Ballin</b>, <b>Millions</b>, and collaborations with Slimelife Shawty,
-                Swagg continues to break ground as one of TSSE’s standout hitmakers.
-            </p>
-
-            <div class="links">
-                <a href="https://open.spotify.com/album/5dflU2bt5h6h2JMUPpGvI9?si=eZmc6aooRia92mxK7LIHtA" target="_blank">Spotify</a>
-                <a href="https://youtu.be/dRV3w967QkE?si=gIDJPKUslUnAVTKq" target="_blank">YouTube</a>
-                <a href="https://www.instagram.com/swagg.topshelf?igsh=MWI1ajVkeTR3amJ2Yg==" target="_blank">Instagram</a>
-            </div>
-        </div>
-
-        <!-- Ty Topshelf -->
-        <div class="artist-card">
-            <img src="ty.jpg" alt="Ty Topshelf">
-            <h3>Ty Topshelf</h3>
-            <p class="bio">
-                Ty Topshelf is the visionary voice of TSSE — an artist, leader, and creative force sculpting a bold new era.
-                With a style that blends introspection and high-energy delivery, Ty’s catalog reflects growth, grit,
-                and timeless storytelling.
-            </p>
-
-            <div class="links">
-                <a href="https://open.spotify.com/artist/5sqoBjIUZN3WEzFVspNho6?si=k2SEpF3pT1u8O4514H_RzQ" target="_blank">Spotify</a>
-                <a href="https://youtu.be/Ce_ll36FP0Q?si=8D1IHGy6dE4EyqK9" target="_blank">YouTube</a>
-                <a href="https://www.instagram.com/ty_topshelf?igsh=eW1vNDg4Y3JweWFt" target="_blank">Instagram</a>
-            </div>
-        </div>
-
-        <!-- Killah Dae -->
-        <div class="artist-card">
-            <img src="dae.jpg" alt="Killah Dae">
-            <h3>Killah Dae</h3>
-            <p class="bio">
-                Killah Dae is a storyteller forged from pain, faith, and resilience. His project
-                <b>Pain & Sacrifice</b> captures the intensity of real-life battles and triumphs, making him
-                one of TSSE’s most emotionally powerful voices.
-            </p>
-
-            <div class="links">
-                <a href="https://open.spotify.com/album/5NQdrLtF8qsayJKi1x9CJb?si=XpXMm_ImReS8G5Xq-_HfTQ" target="_blank">Spotify</a>
-                <a href="https://youtu.be/LSSCALamY4k?si=HvwdjZ1OawT6wFPf" target="_blank">YouTube</a>
-                <a href="https://www.instagram.com/killah_dae?igsh=MW5mZ2N5dmN6a3R5cA==" target="_blank">Instagram</a>
-            </div>
-        </div>
-
-        <!-- C Fettie -->
-        <div class="artist-card">
-            <img src="fettie.jpg" alt="C Fettie">
-            <h3>C Fettie</h3>
-            <p class="bio">
-                C Fettie brings raw bravado, big-energy bars, and a flavor that sparks crowds into motion.
-                His single <b>We Lit</b> continues to amplify his name across social platforms and the streets alike.
-            </p>
-
-            <div class="links">
-                <a href="https://open.spotify.com/album/33WXxVZKSHOVd865BiRZff?si=7WigeXDJQoqQ1fNM_YVGaQ" target="_blank">Spotify</a>
-                <a href="https://youtu.be/2q7mL2f-lrQ?si=6R7oKDVmg5WWZB0K" target="_blank">YouTube</a>
-                <a href="https://www.instagram.com/_cfettie?igsh=MWh5bHFsNnE2cmV4YQ==" target="_blank">Instagram</a>
-            </div>
-        </div>
-
-        <!-- Pyruu DaVixen -->
-        <div class="artist-card">
-            <img src="pyruu.jpg" alt="Pyruu DaVixen">
-            <h3>Pyruu DaVixen</h3>
-            <p class="bio">
-                Pyruu DaVixen is a fierce, boundary-breaking talent with a sound built on emotion, edge, and evolution.
-                Her growing catalog showcases her versatility — from sharp lyricism to melodic fire.
-            </p>
-
-            <div class="links">
-                <a href="https://open.spotify.com/track/08D1xVz8wvFmlrNQipGXIZ?si=LZNHlrm-T9GWuykfVEAlRQ" target="_blank">Spotify</a>
-                <a href="https://youtu.be/E85s1AjxH68?si=6VxlWDiZsHAvW0bp" target="_blank">YouTube</a>
-                <a href="https://www.instagram.com/iampyruu?igsh=MTQ4dTlleWY3dnI1Yg==" target="_blank">Instagram</a>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="about-section">
-        <h2>About the Label</h2>
-        <p>
-            Topshelf Sounds & Ent. is a movement born from ambition, passion, and a commitment to developing real talent.
-            Based in Virginia, TSSE stands at the intersection of creativity and elevation — giving artists the platform
-            and resources they need to rise, shine, and dominate the industry on their own terms.
-        </p>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact-section">
-        <h2>Contact Us</h2>
-        <p>Email: topshelfsoundsent@gmail.com</p>
     </section>
 
     <footer>
-        <p>© 2025 Topshelf Sounds & Ent. All Rights Reserved.</p>
+        <div class="footer-links" style="margin-bottom: 5px;">
+             <a href="https://youtube.com/@tsse_videos?si=7uNLWQQKtQnSbMs6" target="_blank">Follow on YouTube</a>
+            <span style="color: #ccc;">|</span>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        © 2025 Topshelf Sounds & Ent. All Rights Reserved.
     </footer>
 
 </body>
