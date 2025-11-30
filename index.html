@@ -12,10 +12,9 @@
         body {
             margin: 0;
             padding: 0;
-            /* Enhanced background for subtle depth */
-            background: #ededed; /* Slightly darker light background */
-            font-family: 'Inter', Avenir, Helvetica, sans-serif; /* Modern Font */
-            color: #1a1a1a; /* Darker text for better contrast */
+            background: #ededed;
+            font-family: 'Inter', Avenir, Helvetica, sans-serif;
+            color: #1a1a1a;
         }
 
         h1, h2, h3 {
@@ -28,21 +27,20 @@
            -------------------------------------- */
         header {
             text-align: center;
-            /* Reduced vertical padding to be more compact */
             padding: 25px 20px 10px; 
             background: #ffffff;
         }
 
         header img {
-            width: 180px; /* Slightly smaller logo */
+            width: 180px;
             max-width: 70%;
         }
 
         h1 {
-            font-size: 2.5rem; /* Slightly smaller title */
+            font-size: 2.5rem;
             margin-top: 10px;
-            letter-spacing: 2px; /* Increased letter-spacing for premium feel */
-            font-weight: 900; /* Extra bold */
+            letter-spacing: 2px;
+            font-weight: 900;
             text-transform: uppercase;
         }
 
@@ -50,47 +48,45 @@
            NAVIGATION 
            -------------------------------------- */
         nav {
-            background: #1a1a1a; /* Dark background for high contrast */
-            padding: 12px 0; /* Reduced padding */
+            background: #1a1a1a;
+            padding: 12px 0;
             text-align: center;
-            border-bottom: 5px solid #FFC107; /* Thicker accent line */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow below nav */
+            border-bottom: 5px solid #FFC107;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         nav a {
-            color: #ffffff; /* White text on dark background */
+            color: #ffffff;
             text-decoration: none;
             margin: 0 20px;
             font-size: 1.0rem;
             font-weight: 600;
-            transition: color 0.3s, border-bottom 0.3s;
             padding-bottom: 4px;
+            transition: 0.3s;
         }
 
         nav a:hover {
             color: #FFC107;
-            border-bottom: 2px solid #FFC107; /* Underline on hover */
+            border-bottom: 2px solid #FFC107;
         }
 
         /* --------------------------------------
-           PAGE SPECIFIC STYLES: HERO SECTION
+           HERO SECTION
            -------------------------------------- */
         .hero-section {
             background-image: url('Hero background .JPG'); 
             background-size: cover;
-            background-position: center 30%; /* Focus higher if needed */
-            height: 600px; /* Taller hero section */
+            background-position: center 30%;
+            height: 600px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             position: relative;
             margin-bottom: 50px;
-            /* Added subtle inner shadow for depth against the background image */
             box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5); 
         }
         
-        /* Dark overlay for contrast - SLIGHTLY LIGHTER */
         .hero-section::before {
             content: '';
             position: absolute;
@@ -98,7 +94,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.55); /* Slightly darker overlay for text pop */
+            background: rgba(0, 0, 0, 0.55);
         }
 
         .hero-content {
@@ -109,9 +105,9 @@
         }
 
         .hero-content h2 {
-            font-size: 4.5rem; /* Larger, more impactful title */
+            font-size: 4.5rem;
             margin: 0;
-            color: #ffffff; /* Use white for primary text */
+            color: #ffffff;
             text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9);
             font-weight: 900;
             letter-spacing: -1px;
@@ -119,29 +115,27 @@
         }
 
         .hero-content p {
-            font-size: 1.6rem; /* Larger subtitle */
+            font-size: 1.6rem;
             margin: 20px 0 40px;
             font-weight: 300;
-            color: #FFC107; /* Use gold accent color here */
+            color: #FFC107;
         }
 
         .hero-button {
             background: #FFC107;
             color: #1a1a1a;
-            text-decoration: none;
-            padding: 18px 40px; /* Larger button */
-            border-radius: 50px; /* Pill-shaped button */
+            padding: 18px 40px;
+            border-radius: 50px;
             font-size: 1.3rem;
             font-weight: 800;
-            transition: background 0.3s, transform 0.3s;
+            transition: 0.3s;
             text-transform: uppercase;
             border: none;
-            letter-spacing: 0.5px;
         }
 
         .hero-button:hover {
             background: #e6b000;
-            transform: scale(1.05); /* Subtle press effect */
+            transform: scale(1.05);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
@@ -149,16 +143,15 @@
            MEET THE ROSTER SECTION
            -------------------------------------- */
         .roster-section {
-            padding: 60px 20px; /* Increased padding */
+            padding: 60px 20px;
             max-width: 1200px;
             margin: 0 auto 50px;
             text-align: center;
         }
 
         .roster-section h2 {
-            font-size: 3.5rem; /* Larger section title */
-            color: #1a1a1a;
-            margin-bottom: 50px; /* More space below title */
+            font-size: 3.5rem;
+            margin-bottom: 50px;
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: 900;
@@ -166,102 +159,129 @@
 
         .roster-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Slightly larger min-width */
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 30px;
             justify-content: center;
         }
 
         .artist-card {
             background: #ffffff;
-            border-radius: 12px; /* More rounded corners */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for elevation */
-            overflow: hidden; 
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: 0.3s;
             text-decoration: none; 
             color: inherit;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-bottom: 0; /* Remove padding here */
         }
 
         .artist-card:hover {
-            transform: translateY(-8px); /* Greater lift effect */
+            transform: translateY(-8px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
         .artist-card img {
             width: 100%;
-            height: 250px; /* Taller image for better visual impact */
-            object-fit: cover; 
-            border-bottom: 6px solid #FFC107; /* Thicker gold line */
-            margin-bottom: 0;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 6px solid #FFC107;
         }
 
         .artist-card h3 {
             font-size: 1.6rem;
-            color: #1a1a1a;
-            margin: 15px 0 5px; /* Added spacing */
+            margin: 15px 0 5px;
             padding: 0 15px;
             font-weight: 800;
         }
 
-        .artist-card .view-profile-button {
-            background: #1a1a1a; /* Dark primary button */
+        .view-profile-button {
+            background: #1a1a1a;
             color: #ffffff;
-            text-decoration: none;
             padding: 10px 25px;
-            border-radius: 50px; /* Pill shape */
+            border-radius: 50px;
             font-size: 1rem;
             font-weight: 700;
-            margin-top: 10px;
-            margin-bottom: 20px;
-            transition: background 0.3s, color 0.3s;
-            display: inline-block;
+            margin: 10px 0 20px;
             border: 2px solid #1a1a1a;
+            transition: 0.3s;
         }
 
-        .artist-card .view-profile-button:hover {
-            background: #FFC107; /* Gold accent on hover */
+        .view-profile-button:hover {
+            background: #FFC107;
             color: #1a1a1a;
             border-color: #FFC107;
         }
 
         /* --------------------------------------
-           FOOTER 
+           NEW SECTIONS YOU REQUESTED
+           -------------------------------------- */
+        .section {
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+
+        .section h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        .featured-release img {
+            width: 260px;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto 15px;
+        }
+
+        .featured-release p {
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .services-box,
+        .merch-preview {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .services-box ul {
+            line-height: 1.9;
+            margin-left: 20px;
+        }
+
+        .merch-preview img {
+            width: 180px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        /* --------------------------------------
+           FOOTER
            -------------------------------------- */
         footer {
-            margin-top: 50px; 
-            background: #1a1a1a; /* Dark background */
-            color: #ccc; /* Light text */
+            background: #1a1a1a;
+            color: #ccc;
             text-align: center;
-            padding: 30px 20px; /* Increased padding */
+            padding: 30px 20px;
             font-size: 0.9rem;
         }
 
         .footer-links a {
-            color: #ffffff; /* White links */
-            text-decoration: none;
+            color: #ffffff;
             margin: 0 15px;
             font-weight: 600;
-            transition: color 0.3s;
+            text-decoration: none;
         }
 
         .footer-links a:hover {
             color: #FFC107;
-        }
-
-        /* Mobile adjustment */
-        @media (max-width: 700px) {
-            .hero-content h2 {
-                font-size: 3rem;
-            }
-            .hero-content p {
-                font-size: 1.2rem;
-            }
-            .roster-grid {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -281,6 +301,7 @@
         <a href="contact.html">Contact</a>
     </nav>
 
+    <!-- HERO SECTION -->
     <section class="hero-section">
         <div class="hero-content">
             <h2>AUTHENTICITY IS THE HIGHEST FORM OF TALENT</h2>
@@ -289,10 +310,20 @@
         </div>
     </section>
 
+    <!-- NEW SECTION: LATEST RELEASE -->
+    <section class="section">
+        <h2>Latest Release</h2>
+        <div class="featured-release">
+            <img src="chea-butta-everybody-love-butta.png" alt="Chea Butta">
+            <p><strong>Chea Butta – “Chest Out”</strong><br>From the album <em>Everybody Love Butta</em></p>
+        </div>
+    </section>
+
+    <!-- ROSTER SECTION -->
     <section class="roster-section">
         <h2>MEET THE ROSTER</h2>
         <div class="roster-grid">
-            
+
             <a href="artists.html#tytopshelf" class="artist-card">
                 <img src="Ty photo.JPG" alt="Ty Topshelf" />
                 <h3>Ty Topshelf</h3>
@@ -332,9 +363,44 @@
         </div>
     </section>
 
+    <!-- NEW SECTION: STUDIO & SERVICES -->
+    <section class="section">
+        <h2>TSSE Studio & Creative Services</h2>
+        <div class="services-box">
+            <p>We offer full professional services for independent and major artists:</p>
+            <ul>
+                <li>🔥 Mixing & Mastering</li>
+                <li>🎤 Professional Recording</li>
+                <li>🎨 Cover Art & Graphics</li>
+                <li>📈 Rollout Planning</li>
+                <li>📸 Photoshoots</li>
+                <li>🎬 Content & Promo Material</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: MERCH -->
+    <section class="section">
+        <h2>TSSE Merch</h2>
+        <div class="merch-preview">
+            <img src="merch-item1.jpg">
+            <img src="merch-item2.jpg">
+            <img src="merch-item3.jpg">
+        </div>
+    </section>
+
+    <!-- NEW SECTION: CONTACT -->
+    <section class="section">
+        <h2>Contact Us</h2>
+        <p style="text-align:center;">
+            Email: <a href="mailto:1topshelfbookings@gmail.com">1topshelfbookings@gmail.com</a><br>
+            Instagram: <a href="https://instagram.com/tsse_topshelf" target="_blank">@tsse_topshelf</a>
+        </p>
+    </section>
+
     <footer>
         <div class="footer-links" style="margin-bottom: 5px;">
-             <a href="https://youtube.com/@tsse_videos?si=7uNLWQQKtQnSbMs6" target="_blank">Follow on YouTube</a>
+            <a href="https://youtube.com/@tsse_videos?si=7uNLWQQKtQnSbMs6" target="_blank">Follow on YouTube</a>
             <span style="color: #ccc;">|</span>
             <a href="contact.html">Contact Us</a>
         </div>
