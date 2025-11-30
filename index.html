@@ -6,9 +6,7 @@
     <title>Topshelf Sounds & Ent. | Home</title>
     
     <style>
-        /* --------------------------------------
-           GLOBAL STYLES & TYPOGRAPHY
-           -------------------------------------- */
+        /* GLOBAL */
         body {
             margin: 0;
             padding: 0;
@@ -21,13 +19,11 @@
             color: #1a1a1a;
             font-weight: 700;
         }
-        
-        /* --------------------------------------
-           HEADER & LOGO 
-           -------------------------------------- */
+
+        /* HEADER */
         header {
             text-align: center;
-            padding: 25px 20px 10px; 
+            padding: 25px 20px 10px;
             background: #ffffff;
         }
 
@@ -44,15 +40,13 @@
             text-transform: uppercase;
         }
 
-        /* --------------------------------------
-           NAVIGATION 
-           -------------------------------------- */
+        /* NAV */
         nav {
             background: #1a1a1a;
             padding: 12px 0;
             text-align: center;
             border-bottom: 5px solid #FFC107;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         nav a {
@@ -70,11 +64,9 @@
             border-bottom: 2px solid #FFC107;
         }
 
-        /* --------------------------------------
-           HERO SECTION
-           -------------------------------------- */
+        /* HERO */
         .hero-section {
-            background-image: url('Hero background .JPG'); 
+            background-image: url('Hero background .JPG');
             background-size: cover;
             background-position: center 30%;
             height: 600px;
@@ -84,9 +76,9 @@
             text-align: center;
             position: relative;
             margin-bottom: 50px;
-            box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5); 
+            box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
         }
-        
+
         .hero-section::before {
             content: '';
             position: absolute;
@@ -94,7 +86,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.55);
+            background: rgba(0,0,0,0.55);
         }
 
         .hero-content {
@@ -107,11 +99,9 @@
         .hero-content h2 {
             font-size: 4.5rem;
             margin: 0;
-            color: #ffffff;
-            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9);
+            text-shadow: 1px 1px 6px rgba(0,0,0,0.9);
             font-weight: 900;
             letter-spacing: -1px;
-            line-height: 1.1;
         }
 
         .hero-content p {
@@ -128,95 +118,17 @@
             border-radius: 50px;
             font-size: 1.3rem;
             font-weight: 800;
-            transition: 0.3s;
             text-transform: uppercase;
-            border: none;
+            transition: 0.3s;
         }
 
         .hero-button:hover {
             background: #e6b000;
             transform: scale(1.05);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
-        /* --------------------------------------
-           MEET THE ROSTER SECTION
-           -------------------------------------- */
-        .roster-section {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto 50px;
-            text-align: center;
-        }
-
-        .roster-section h2 {
-            font-size: 3.5rem;
-            margin-bottom: 50px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 900;
-        }
-
-        .roster-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-            justify-content: center;
-        }
-
-        .artist-card {
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: 0.3s;
-            text-decoration: none; 
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .artist-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .artist-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-bottom: 6px solid #FFC107;
-        }
-
-        .artist-card h3 {
-            font-size: 1.6rem;
-            margin: 15px 0 5px;
-            padding: 0 15px;
-            font-weight: 800;
-        }
-
-        .view-profile-button {
-            background: #1a1a1a;
-            color: #ffffff;
-            padding: 10px 25px;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 700;
-            margin: 10px 0 20px;
-            border: 2px solid #1a1a1a;
-            transition: 0.3s;
-        }
-
-        .view-profile-button:hover {
-            background: #FFC107;
-            color: #1a1a1a;
-            border-color: #FFC107;
-        }
-
-        /* --------------------------------------
-           NEW SECTIONS YOU REQUESTED
-           -------------------------------------- */
+        /* WRAPPER */
         .section {
             max-width: 1200px;
             margin: 0 auto 60px;
@@ -231,20 +143,104 @@
             font-weight: 900;
         }
 
-        .featured-release img {
-            width: 260px;
-            border-radius: 8px;
-            display: block;
-            margin: 0 auto 15px;
-        }
-
-        .featured-release p {
+        /* VIDEO BOX */
+        .featured-release {
+            max-width: 900px;
+            margin: 0 auto;
             text-align: center;
-            font-size: 1.2rem;
         }
 
-        .services-box,
-        .merch-preview {
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            margin-bottom: 20px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 12px;
+        }
+
+        /* ROSTER */
+        .roster-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .roster-section h2 {
+            font-size: 3.5rem;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .roster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .artist-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .artist-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .artist-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 6px solid #FFC107;
+        }
+
+        .artist-card h3 {
+            font-size: 1.6rem;
+            margin: 15px 0 5px;
+            font-weight: 800;
+        }
+
+        .view-profile-button {
+            background: #1a1a1a;
+            color: #ffffff;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            border: 2px solid #1a1a1a;
+            transition: 0.3s;
+            display: inline-block;
+            margin: 10px 0 20px;
+        }
+
+        .view-profile-button:hover {
+            background: #FFC107;
+            color: #1a1a1a;
+            border-color: #FFC107;
+        }
+
+        /* SERVICES */
+        .services-box {
             background: #ffffff;
             padding: 40px;
             border-radius: 12px;
@@ -252,19 +248,11 @@
         }
 
         .services-box ul {
-            line-height: 1.9;
             margin-left: 20px;
+            line-height: 1.9;
         }
 
-        .merch-preview img {
-            width: 180px;
-            border-radius: 10px;
-            margin: 10px;
-        }
-
-        /* --------------------------------------
-           FOOTER
-           -------------------------------------- */
+        /* FOOTER */
         footer {
             background: #1a1a1a;
             color: #ccc;
@@ -283,6 +271,7 @@
         .footer-links a:hover {
             color: #FFC107;
         }
+
     </style>
 </head>
 
@@ -301,7 +290,7 @@
         <a href="contact.html">Contact</a>
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <section class="hero-section">
         <div class="hero-content">
             <h2>AUTHENTICITY IS THE HIGHEST FORM OF TALENT</h2>
@@ -310,18 +299,26 @@
         </div>
     </section>
 
-    <!-- NEW SECTION: LATEST RELEASE -->
+    <!-- LATEST RELEASE – VIDEO -->
     <section class="section">
         <h2>Latest Release</h2>
         <div class="featured-release">
-            <img src="chea-butta-everybody-love-butta.png" alt="Chea Butta">
-            <p><strong>Chea Butta – “Chest Out”</strong><br>From the album <em>Everybody Love Butta</em></p>
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/0WfTASi_nFo"
+                    title="Chea Butta - Chest Out (Official Video)"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p><strong>Chea Butta – “Chest Out”</strong><br><em>Official Music Video</em></p>
         </div>
     </section>
 
-    <!-- ROSTER SECTION -->
+    <!-- ROSTER -->
     <section class="roster-section">
         <h2>MEET THE ROSTER</h2>
+
         <div class="roster-grid">
 
             <a href="artists.html#tytopshelf" class="artist-card">
@@ -363,7 +360,7 @@
         </div>
     </section>
 
-    <!-- NEW SECTION: STUDIO & SERVICES -->
+    <!-- SERVICES -->
     <section class="section">
         <h2>TSSE Studio & Creative Services</h2>
         <div class="services-box">
@@ -379,21 +376,11 @@
         </div>
     </section>
 
-    <!-- NEW SECTION: MERCH -->
-    <section class="section">
-        <h2>TSSE Merch</h2>
-        <div class="merch-preview">
-            <img src="merch-item1.jpg">
-            <img src="merch-item2.jpg">
-            <img src="merch-item3.jpg">
-        </div>
-    </section>
-
-    <!-- NEW SECTION: CONTACT -->
+    <!-- CONTACT -->
     <section class="section">
         <h2>Contact Us</h2>
         <p style="text-align:center;">
-            Email: <a href="mailto:1topshelfbookings@gmail.com">1topshelfbookings@gmail.com</a><br>
+            Email: <a href="mailto:tsse@execs.com">tsse@execs.com</a><br>
             Instagram: <a href="https://instagram.com/tsse_topshelf" target="_blank">@tsse_topshelf</a>
         </p>
     </section>
@@ -402,7 +389,7 @@
         <div class="footer-links" style="margin-bottom: 5px;">
             <a href="https://youtube.com/@tsse_videos?si=7uNLWQQKtQnSbMs6" target="_blank">Follow on YouTube</a>
             <span style="color: #ccc;">|</span>
-            <a href="contact.html">Contact Us</a>
+            <a href="mailto:tsse@execs.com">Contact Us</a>
         </div>
         © 2025 Topshelf Sounds & Ent. All Rights Reserved.
     </footer>
