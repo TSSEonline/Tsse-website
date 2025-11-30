@@ -2,74 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Topshelf Sounds & Ent. | Artists</title>
 
     <style>
+        /* GLOBAL */
         body {
             margin: 0;
             padding: 0;
-            background: #fdfdfd;
-            font-family: Avenir, Helvetica, sans-serif;
+            background: #f5f5f5;
+            font-family: 'Inter', Avenir, Helvetica, sans-serif;
             color: #222;
         }
 
+        h1, h2, h3 {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* HEADER */
         header {
             text-align: center;
-            padding: 40px 20px 25px;
+            padding: 30px 20px 20px;
+            background: #ffffff;
         }
 
         header img {
-            width: 200px;
-            max-width: 80%;
+            width: 160px;
+            max-width: 85%;
         }
 
-        h1 {
-            font-size: 2.8rem;
-            margin-top: 15px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
+        header h1 {
+            font-size: 2.4rem;
+            margin-top: 12px;
+            font-weight: 900;
+            letter-spacing: 2px;
             color: #1a1a1a;
+            text-transform: uppercase;
         }
 
+        /* NAVIGATION */
         nav {
-            background: #ffffff;
-            padding: 15px 0;
+            background: #1a1a1a;
+            padding: 12px 0;
             text-align: center;
-            border-top: 1px solid #eee;
-            border-bottom: 3px solid #FFC107;
+            border-bottom: 4px solid #FFC107;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
         }
 
         nav a {
-            color: #333;
+            color: #ffffff;
             text-decoration: none;
-            margin: 0 25px;
-            font-size: 1.05rem;
+            margin: 0 18px;
+            font-size: 1rem;
             font-weight: 600;
-            transition: color 0.3s;
+            transition: 0.3s ease;
         }
 
         nav a:hover {
             color: #FFC107;
         }
 
+        /* ARTIST LIST */
         .artist-list {
             padding: 50px 20px;
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
+        /* INDIVIDUAL ARTIST BLOCK */
         .artist-profile {
-            background: #fff;
-            border-radius: 12px;
+            background: #ffffff;
+            border-radius: 14px;
             margin-bottom: 60px;
-            padding: 40px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding: 35px;
             display: flex;
             flex-wrap: wrap;
             gap: 30px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+            border-left: 6px solid #FFC107;
         }
 
+        /* GALLERY */
         .artist-gallery {
             width: 40%;
             min-width: 260px;
@@ -81,41 +95,46 @@
         .artist-gallery img {
             width: 100%;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
         }
 
+        /* ARTIST INFO */
         .artist-info {
             flex: 1;
             min-width: 300px;
         }
 
         .artist-info h2 {
-            font-size: 3rem;
+            font-size: 2.7rem;
+            font-weight: 900;
             color: #FFC107;
-            margin-bottom: 10px;
-            border-bottom: 3px solid #eee;
-            padding-bottom: 5px;
+            border-bottom: 4px solid #eee;
+            padding-bottom: 8px;
+            margin-bottom: 8px;
         }
 
         .artist-info h3 {
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             color: #555;
-            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
         }
 
         .artist-info p {
-            line-height: 1.6;
             font-size: 1.05rem;
+            line-height: 1.65;
+            margin-bottom: 12px;
         }
 
+        /* Social links */
         .social-links {
-            margin: 15px 0 20px;
+            margin: 18px 0 25px;
         }
 
         .social-links a {
-            color: #222;
-            margin-right: 15px;
-            font-weight: 600;
+            color: #1a1a1a;
+            margin-right: 18px;
+            font-weight: 700;
             text-decoration: none;
             transition: 0.3s;
         }
@@ -124,21 +143,57 @@
             color: #FFC107;
         }
 
+        /* FOOTER */
         footer {
-            background: #fff;
-            padding: 20px;
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 25px 20px;
             text-align: center;
-            font-size: 0.85rem;
-            color: #888;
-            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+            margin-top: 40px;
         }
+
+        /* MOBILE OPTIMIZATION */
+        @media (max-width: 700px) {
+
+            header img {
+                width: 135px;
+            }
+
+            header h1 {
+                font-size: 1.9rem;
+            }
+
+            nav a {
+                margin: 0 12px;
+                font-size: 0.95rem;
+            }
+
+            .artist-profile {
+                padding: 25px;
+            }
+
+            .artist-info h2 {
+                font-size: 2.2rem;
+            }
+
+            .artist-gallery {
+                width: 100%;
+            }
+
+            .artist-gallery img {
+                height: auto;
+            }
+        }
+
     </style>
 </head>
 
 <body>
 
 <header>
-    <img src="tsse-logo.png" alt="Topshelf Sounds & Ent. Logo" />
+    <!-- UPDATED LOGO FILE NAME -->
+    <img src="tsse-logo.PNG" alt="Topshelf Sounds & Ent. Logo" />
     <h1>Topshelf Sounds & Ent.</h1>
 </header>
 
@@ -153,7 +208,7 @@
 <section class="artist-list">
 
     <!-- ---------------- CHEA BUTTA ---------------- -->
-    <div class="artist-profile">
+    <div class="artist-profile" id="cheabutta">
         <div class="artist-gallery">
             <img src="Butta performing .JPG" alt="Chea Butta Live Performance" />
             <img src="Butta cover.JPG" alt="Chea Butta Album Art" />
@@ -164,17 +219,24 @@
             <h3>The Voice of the Block</h3>
 
             <p>
-             Chea Butta is a magnetic force in the hip-hop scene, captivating audiences with her raw lyricism and undeniable charisma. <strong>Originating from Norfolk, Virginia</strong>, Chea Butta has carved out a unique space for herself by blending gritty narratives with catchy, confident beats.</p>
+                Chea Butta is a magnetic force in the hip-hop scene, captivating audiences with her 
+                raw lyricism and undeniable charisma. <strong>Originating from Norfolk, Virginia</strong>, 
+                she blends gritty narratives with catchy confidence.
+            </p>
 
-        <div class="album-highlight">
-            <p>The spotlight is currently on Chea Butta with the release of her highly anticipated new album, <strong>“Everybody Love Butta.”</strong> The project is a vibrant testament to her growth as an artist, showcasing a diverse range of tracks that explore themes of ambition, life in the city, and unapologetic self-love. Critics and fans alike are praising the album for its tight production and Chea Butta’s most complex and compelling verses to date. <strong>“Everybody Love Butta”</strong> is a definitive statement that solidifies her position as an essential voice in contemporary music.</p>
-        </div>
-        
-        <p>Known for her dynamic stage presence and ability to connect instantly with her audience, Chea Butta continues to build a fiercely loyal following. Her dedication to her craft and her authentic storytelling promise a long and impactful career. Keep an eye on Chea Butta—she's not just making music; she's setting the new standard.
+            <p>
+                Her new album <strong>“Everybody Love Butta”</strong> showcases her elevated versatility — 
+                a mix of ambition, street life reflections, and bold self-love. Fans and critics are 
+                calling it her strongest project yet.
+            </p>
+
+            <p>
+                Known for her explosive stage presence and her instant connection with crowds, Chea 
+                Butta continues to rise as a defining voice in today’s music culture.
             </p>
 
             <div class="social-links">
-                <a href="https://open.spotify.com/album/73FRxINOthxKKLLpcQ7WOl?si=Q7pEZxytSricbV7o8kRfSg" target="_blank">Spotify</a>
+                <a href="https://open.spotify.com/album/73FRxINOthxKKLLpcQ7WOl" target="_blank">Spotify</a>
                 <a href="https://www.instagram.com/chea_butta" target="_blank">Instagram</a>
                 <a href="https://youtu.be/0WfTASi_nFo" target="_blank">YouTube</a>
             </div>
@@ -184,7 +246,7 @@
     </div>
 
     <!-- ---------------- TY TOPSHELF ---------------- -->
-    <div class="artist-profile">
+    <div class="artist-profile" id="tytopshelf">
         <div class="artist-gallery">
             <img src="Ty photo.JPG" alt="Ty Topshelf Portrait" />
             <img src="We lit cover.JPG" alt="We Lit Cover Art" />
@@ -195,12 +257,14 @@
             <h3>The Architect of Sound</h3>
 
             <p>
-                As the founder of Topshelf Sounds & Ent., Ty Topshelf has carved out a lane as both a visionary 
-                and a creator. His music blends confidence with creativity, pulling from real-life experiences 
-                and translating them into relatable anthems. Ty’s leadership behind the scenes has shaped the 
-                label into a rising powerhouse, while his own releases continue to gain traction across the 
-                region. Whether he’s crafting melodies, arranging vocals, or building artists from the ground up, 
-                Ty plays the game like a designer — every move intentional, every sound elevated.
+                Founder of Topshelf Sounds & Ent., Ty Topshelf is both a visionary and a creator. 
+                His music blends confidence, authenticity, and melodic grit — while his leadership has 
+                shaped TSSE into a rising powerhouse.
+            </p>
+
+            <p>
+                From crafting melodies to developing artists, Ty approaches the game like a designer — 
+                intentional, strategic, and always elevating the standard.
             </p>
 
             <div class="social-links">
@@ -214,7 +278,7 @@
     </div>
 
     <!-- ---------------- KVNG SWAGG ---------------- -->
-    <div class="artist-profile">
+    <div class="artist-profile" id="kvngswagg">
         <div class="artist-gallery">
             <img src="Takin da throne cover.JPG" alt="Takin Da Throne Cover" />
             <img src="Cantsay2much cover.JPG" alt="Can't Say 2 Much Cover" />
@@ -225,11 +289,13 @@
             <h3>The Crown Prince of Trap</h3>
 
             <p>
-                Kvng Swagg steps into every booth like royalty. With a delivery sharpened by struggle and a flow 
-                sculpted by ambition, he brings a regal aura to the trap scene. His hit records “Ballin,” 
-                “Millions,” and collaborations with Slimelife Shawty have put him in his own bracket — one defined 
-                by high energy, sharp cadence, and standout confidence. His album <em>Takin’ Da Throne</em> marks his 
-                official arrival, a declaration that he’s here to dominate, not participate.
+                Kvng Swagg enters every booth like royalty. His polished cadence, street-sharp delivery, 
+                and undeniable energy have cemented him as one of the label's most electrifying voices.
+            </p>
+
+            <p>
+                With hits like “Ballin,” “Millions,” and a standout track with Slimelife Shawty, 
+                he continues to expand his throne — and his album <em>Takin’ Da Throne</em> marks a major evolution.
             </p>
 
             <div class="social-links">
@@ -243,7 +309,7 @@
     </div>
 
     <!-- ---------------- KILLAH DAE ---------------- -->
-    <div class="artist-profile">
+    <div class="artist-profile" id="killahdae">
         <div class="artist-gallery">
             <img src="Crash out cover.JPG" alt="Crash Out Cover" />
             <img src="Pain and sacrifice cover.JPG" alt="Pain and Sacrifice Cover" />
@@ -255,11 +321,14 @@
             <h3>The Street Storyteller</h3>
 
             <p>
-                Killah Dae is wired with grit. His catalog paints the emotional and physical toll of survival, 
-                transforming scars into scripture. Fans gravitate toward his authenticity — he doesn’t rap for 
-                approval; he raps because the truth demands a microphone. His project <em>Pain and Sacrifice</em> is a 
-                gripping narrative documenting the weight of ambition, resilience, and the cost of chasing better. 
-                In an era of microwaved music, Killah Dae stands as a reminder that timeless stories still matter.
+                Killah Dae delivers emotional, unfiltered stories rooted in survival, pain, 
+                and resilience. His music hits with purpose — a testament to everything he’s 
+                endured and overcome.
+            </p>
+
+            <p>
+                His standout project <em>Pain and Sacrifice</em> is a gripping journey through ambition, 
+                trauma, and transformation. Fans connect deeply to his honesty and authenticity.
             </p>
 
             <div class="social-links">
@@ -273,7 +342,7 @@
     </div>
 
     <!-- ---------------- C FETTIE ---------------- -->
-    <div class="artist-profile">
+    <div class="artist-profile" id="cfettie">
         <div class="artist-gallery">
             <img src="We lit cover.JPG" alt="We Lit Cover" />
         </div>
@@ -283,10 +352,13 @@
             <h3>The Party Starter</h3>
 
             <p>
-                C Fettie delivers high-octane records built for the clubs, the cars, and the crowds. His energy is 
-                contagious — every hook hits like a chant, every beat becomes a celebration. With his rising single 
-                “We Lit,” Fettie has carved out a space as the spark plug of the label, the voice that flips any 
-                room from quiet to chaos. He’s not just an artist; he’s a vibe generator.
+                C Fettie brings raw momentum and pure energy to every beat. “We Lit” has become a 
+                regional anthem — a track built for the clubs, the streets, and everything in between.
+            </p>
+
+            <p>
+                With a rising fanbase and a signature high-energy sound, Fettie is quickly becoming 
+                one of TSSE’s essential hype creators.
             </p>
 
             <div class="social-links">
@@ -300,7 +372,7 @@
     </div>
 
     <!-- ---------------- PYRUU DAVIXEN ---------------- -->
-    <div class="artist-profile">
+    <div class="artist-profile" id="pyruudavixen">
         <div class="artist-gallery">
             <img src="Pyruu photo.JPG" alt="Pyruu Portrait" />
             <img src="Pyruu photo2.JPG" alt="Pyruu Portrait 2" />
@@ -311,11 +383,13 @@
             <h3>The Enigmatic Force</h3>
 
             <p>
-                Pyruu DaVixen brings an unpredictable, intoxicating presence to the label. Her sound blends melodic 
-                mystique with fierce confidence, creating a hypnotic lane all her own. She is the embodiment of 
-                duality — sharp yet soft, bold yet mysterious. Her debut EP, coming Spring 2026, is already building 
-                anticipation as fans prepare for a new wave of genre-blending artistry from one of Topshelf’s most 
-                intriguing acts.
+                Pyruu DaVixen is a magnetic, unpredictable presence who blends melody with intensity. 
+                Her duality — fierce yet soft, bold yet mysterious — creates a sound only she can deliver.
+            </p>
+
+            <p>
+                With her debut EP arriving in Spring 2026, anticipation is already rising as her fanbase 
+                prepares for a new wave of genre-defying creativity.
             </p>
 
             <div class="social-links">
