@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Topshelf Sounds & Ent. | Services</title>
+
+    <style>
+        /* GLOBAL */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            font-family: 'Inter', Avenir, Helvetica, sans-serif;
+            color: #222;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 0;
+            padding: 0;
+            color: #1a1a1a;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+            background: #ffffff;
+        }
+
+        header img {
+            width: 180px;
+            max-width: 80%;
+        }
+
+        header h1 {
+            font-size: 2.6rem;
+            margin-top: 10px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* NAV (MATCHES OTHER PAGES) */
+        nav {
+            background: #1a1a1a;
+            padding: 12px 0;
+            text-align: center;
+            border-bottom: 4px solid #FFC107;
+        }
+
+        nav a {
+            color: #ffffff;
+            margin: 0 22px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #FFC107;
+        }
+
+        /* MAIN WRAPPER */
+        .services-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px 70px;
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .services-header h2 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #FFC107;
+            margin-bottom: 10px;
+        }
+
+        .services-header p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* SERVICE GRID */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 22px 20px 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border-top: 4px solid #FFC107;
+            transition: 0.25s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+        }
+
+        .service-icon {
+            font-size: 1.7rem;
+            margin-bottom: 6px;
+        }
+
+        .service-card h3 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .service-card p {
+            font-size: 0.98rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .service-tagline {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #999;
+        }
+
+        /* HIGHLIGHT STRIP */
+        .highlight-strip {
+            margin-top: 45px;
+            background: #1a1a1a;
+            color: #f9f9f9;
+            border-radius: 14px;
+            padding: 28px 22px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .highlight-text {
+            flex: 2;
+            min-width: 260px;
+        }
+
+        .highlight-text h3 {
+            color: #FFC107;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        .highlight-text p {
+            color: #ddd;
+            line-height: 1.7;
+            font-size: 0.98rem;
+        }
+
+        .highlight-cta {
+            flex: 1;
+            min-width: 240px;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #FFC107;
+            color: #1a1a1a;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #e6b000;
+            transform: scale(1.05);
+        }
+
+        .highlight-cta p {
+            margin-top: 10px;
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+
+        /* PROCESS SECTION */
+        .process-section {
+            margin-top: 50px;
+        }
+
+        .process-section h3 {
+            font-size: 1.9rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .process-steps {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .process-steps li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e3e3e3;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .process-steps strong {
+            color: #1a1a1a;
+            margin-right: 6px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1a1a1a;
+            color: #ccc;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            header img {
+                width: 150px;
+            }
+
+            header h1 {
+                font-size: 1.9rem;
+            }
+
+            .services-header h2 {
+                font-size: 2.2rem;
+            }
+
+            .highlight-strip {
+                padding: 20px 16px;
+            }
+
+            .highlight-cta {
+                text-align: left;
+            }
+
+            .cta-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="tsse-logo.PNG" alt="Topshelf Sounds & Ent. Logo" />
+    <h1>Topshelf Sounds & Ent.</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="artists.html">Artists</a>
+    <a href="releases.html">Releases</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main class="services-page">
+
+    <!-- PAGE INTRO -->
+    <div class="services-header">
+        <h2>TSSE Studio & Creative Services</h2>
+        <p>
+            One label. Every service you need. From the first idea to the final rollout, 
+            Topshelf Sounds & Ent. builds music, brands, and full artist experiences 
+            that meet the <strong>TopShelf Standard</strong>.
+        </p>
+    </div>
+
+    <!-- SERVICE CARDS -->
+    <section class="services-grid">
+
+        <div class="service-card">
+            <div class="service-icon">🎚️</div>
+            <h3>Mixing & Mastering</h3>
+            <p>
+                Radio-ready sound with impact. Tight low end, clean vocals, and competitive loudness 
+                without losing emotion or dynamics.
+            </p>
+            <p class="service-tagline">Single · EP · Album</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🎤</div>
+            <h3>Studio Recording</h3>
+            <p>
+                Professional recording sessions with direction on delivery, adlibs, layers, and 
+                performance so the record feels alive.
+            </p>
+            <p class="service-tagline">Vocal Production · Coaching</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🎨</div>
+            <h3>Cover Art & Graphics</h3>
+            <p>
+                Single and album covers, promo flyers, logos and brand visuals built around your story —
+                street-luxury, bold, and memorable.
+            </p>
+            <p class="service-tagline">Artwork · Flyers · Branding</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">📈</div>
+            <h3>Rollout Planning</h3>
+            <p>
+                Drop dates, content calendar, teaser strategy, ads, and promo ideas that move your release 
+                from “out” to “seen.”
+            </p>
+            <p class="service-tagline">Singles · Projects · Campaigns</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🧩</div>
+            <h3>Artist Development</h3>
+            <p>
+                Image, sound, catalog, and strategy. We help shape the full artist — not just the song —
+                so everything feels aligned.
+            </p>
+            <p class="service-tagline">Brand · Direction · Strategy</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🎬</div>
+            <h3>Content & Social Media</h3>
+            <p>
+                Short-form content ideas, visual concepts, captions, and posting strategy built around your 
+                music and your audience.
+            </p>
+            <p class="service-tagline">Clips · Visual Ideas · Social Plan</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">📝</div>
+            <h3>Press & EPK Support</h3>
+            <p>
+                Bios, one-sheets, and digital press kits that tell your story the right way when you’re 
+                pitching to platforms, DJs, or media.
+            </p>
+            <p class="service-tagline">EPK · Bios · One-Sheets</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">💿</div>
+            <h3>Release Setup</h3>
+            <p>
+                Guidance on distribution, metadata, credits, and properly setting up releases across platforms 
+                so everything is clean and professional.
+            </p>
+            <p class="service-tagline">DSP Ready · Clean Uploads</p>
+        </div>
+
+    </section>
+
+    <!-- HIGHLIGHT STRIP / CTA -->
+    <section class="highlight-strip">
+        <div class="highlight-text">
+            <h3>Ready for the TopShelf Treatment?</h3>
+            <p>
+                Whether you’re dropping your first single or your tenth project, we can help shape the sound, 
+                look, and rollout so it all hits at a higher level. Serious artists only — if you’re ready to 
+                invest in your craft, we’re ready to build with you.
+            </p>
+        </div>
+        <div class="highlight-cta">
+            <a class="cta-button" href="mailto:tsse@execs.com?subject=TSSE%20Services%20Inquiry">
+                Email TSSE Studio
+            </a>
+            <p>Include links to your music and what you’re looking for.</p>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process-section">
+        <h3>How It Works</h3>
+        <ul class="process-steps">
+            <li><strong>1.</strong> You email <a href="mailto:tsse@execs.com">tsse@execs.com</a> with links to your music and what you need.</li>
+            <li><strong>2.</strong> We review your sound, goals, and timeline to see the best way to work together.</li>
+            <li><strong>3.</strong> You receive a service plan and quote based on your project (single, EP, album, or full rollout).</li>
+            <li><strong>4.</strong> Once confirmed, we lock in dates, deliverables, and start the work.</li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    © 2025 Topshelf Sounds & Ent. All Rights Reserved.
+</footer>
+
+</body>
+</html>
