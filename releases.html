@@ -2,140 +2,138 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Topshelf Sounds & Ent. | Releases</title>
     
     <style>
-        /* --------------------------------------
-           GLOBAL STYLES & TYPOGRAPHY (LIGHT MODE)
-           -------------------------------------- */
+        /* GLOBAL */
         body {
             margin: 0;
             padding: 0;
-            background: #f7f7f7;
-            font-family: Avenir, Helvetica, sans-serif;
-            color: #333333;
+            background: #f5f5f5;
+            font-family: 'Inter', Avenir, Helvetica, sans-serif;
+            color: #333;
         }
 
         h1, h2, h3 {
             color: #1a1a1a;
+            margin: 0;
+            padding: 0;
         }
 
-        /* --------------------------------------
-           HEADER & LOGO (Copy from Homepage)
-           -------------------------------------- */
+        /* HEADER */
         header {
             text-align: center;
-            padding: 40px 20px 20px;
+            padding: 30px 20px 20px;
+            background: #ffffff;
         }
 
         header img {
-            width: 200px;
+            width: 170px;
             max-width: 80%;
         }
 
-        h1 {
-            font-size: 2.8rem;
-            margin-top: 15px;
-            letter-spacing: 1px;
-            font-weight: 700;
+        header h1 {
+            font-size: 2.4rem;
+            margin-top: 10px;
+            letter-spacing: 2px;
+            font-weight: 900;
+            text-transform: uppercase;
         }
 
-        /* --------------------------------------
-           NAVIGATION (Copy from Homepage)
-           -------------------------------------- */
+        /* NAV */
         nav {
-            background: #ffffff;
-            padding: 15px 0;
+            background: #1a1a1a;
+            padding: 12px 0;
             text-align: center;
-            border-top: 1px solid #eeeeee;
-            border-bottom: 3px solid #FFC107;
+            border-bottom: 4px solid #FFC107;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
 
         nav a {
-            color: #333333;
+            color: #ffffff;
             text-decoration: none;
-            margin: 0 25px;
-            font-size: 1.05rem;
+            margin: 0 18px;
+            font-size: 1rem;
             font-weight: 600;
-            transition: color 0.3s;
+            transition: 0.3s;
         }
 
         nav a:hover {
             color: #FFC107;
         }
 
-        /* --------------------------------------
-           PAGE SPECIFIC STYLES: RELEASES GRID
-           -------------------------------------- */
+        /* PAGE CONTENT */
         .releases-container {
             padding: 50px 20px;
             max-width: 1200px;
             margin: 0 auto;
-            text-align: center;
         }
 
+        .releases-container h2 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 35px;
+            text-transform: uppercase;
+        }
+
+        /* GRID */
         .releases-grid {
             display: grid;
-            /* Default: 2 covers per row */
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 40px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 35px;
         }
 
         .release-item {
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: 0.3s ease;
+            text-decoration: none;
+            color: #1a1a1a;
         }
 
         .release-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
         }
 
         .release-item img {
             width: 100%;
-            aspect-ratio: 1 / 1; /* Ensures perfect square covers */
-            border-radius: 8px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-            border: 3px solid #FFC107; /* Gold border accent */
+            aspect-ratio: 1 / 1;
+            border-radius: 10px;
+            border: 3px solid #FFC107;
+            box-shadow: 0 10px 22px rgba(0,0,0,0.12);
         }
         
         .release-item h3 {
             font-size: 1.3rem;
-            margin: 15px 0 5px;
-            font-weight: 700;
-            color: #1a1a1a;
+            margin: 15px 0 3px;
+            font-weight: 800;
         }
 
         .release-item p {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: #666;
             margin: 0;
         }
 
-        /* Media Query for larger screens (3 or 4 covers per row) */
-        @media (min-width: 900px) {
-            .releases-grid {
-                grid-template-columns: repeat(3, 1fr); 
-            }
-        }
-        @media (min-width: 1200px) {
-            .releases-grid {
-                grid-template-columns: repeat(4, 1fr); 
-            }
-        }
-
-        /* --------------------------------------
-           FOOTER (Copy from Homepage)
-           -------------------------------------- */
+        /* FOOTER */
         footer {
             margin-top: 50px;
-            background: #ffffff;
-            color: #999; 
+            background: #1a1a1a;
+            color: #ccc;
             text-align: center;
-            padding: 20px;
-            font-size: 0.85rem;
-            border-top: 1px solid #eeeeee;
+            padding: 25px 20px;
+            font-size: 0.9rem;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+            header img {
+                width: 150px;
+            }
+            header h1 {
+                font-size: 1.9rem;
+            }
         }
     </style>
 </head>
@@ -143,7 +141,8 @@
 <body>
 
     <header>
-        <img src="tsse-logo.png" alt="Topshelf Sounds & Ent. Logo" />
+        <!-- Updated Logo Name -->
+        <img src="tsse-logo.PNG" alt="Topshelf Sounds & Ent. Logo" />
         <h1>Topshelf Sounds & Ent.</h1>
     </header>
 
@@ -159,50 +158,62 @@
         <h2>Latest & Featured Releases</h2>
 
         <div class="releases-grid">
-            
-            <a href="artists.html#cheabutta" class="release-item">
-                <img src="Butta cover.JPG" alt="Chea Butta - Everybody Love Butta" />
+
+            <!-- CHEA BUTTA -->
+            <a href="https://open.spotify.com/album/73FRxINOthxKKLLpcQ7WOl?si=ZXuLQI7gRCq_UYVx-kmgOg" 
+               target="_blank" 
+               class="release-item">
+                <img src="Butta cover.JPG" alt="Chea Butta - Everybody Love Butta">
                 <h3>Everybody Love Butta</h3>
                 <p>Chea Butta</p>
             </a>
 
-            <a href="artists.html#kvngswagg" class="release-item">
-                <img src="Takin da throne cover.JPG" alt="Kvng Swagg - Takin' Da Throne" />
+            <!-- KVNG SWAGG – TAKIN DA THRONE -->
+            <a href="https://open.spotify.com/album/5dflU2bt5h6h2JMUPpGvI9?si=c2pDYJ_dR1mo2KCzebtzVg" 
+               target="_blank" 
+               class="release-item">
+                <img src="Takin da throne cover.JPG" alt="Kvng Swagg - Takin' Da Throne">
                 <h3>Takin' Da Throne</h3>
                 <p>Kvng Swagg</p>
             </a>
 
-            <a href="artists.html#killahdae" class="release-item">
-                <img src="Pain and sacrifice cover.JPG" alt="Killah Dae - Pain and Sacrifice" />
+            <!-- KILLAH DAE – PAIN & SACRIFICE -->
+            <a href="https://open.spotify.com/album/5NQdrLtF8qsayJKi1x9CJb?si=W7vO01T1TnGlhaATW8JKHg" 
+               target="_blank" 
+               class="release-item">
+                <img src="Pain and sacrifice cover.JPG" alt="Killah Dae - Pain and Sacrifice">
                 <h3>Pain and Sacrifice</h3>
                 <p>Killah Dae</p>
             </a>
 
-            <a href="artists.html#cfettie" class="release-item">
-                <img src="We lit cover.JPG" alt="C Fettie - We Lit" />
-                <h3>We Lit (Feat. Ty Topshelf)</h3>
+            <!-- C FETTIE – WE LIT -->
+            <a href="https://open.spotify.com/album/33WXxVZKSHOVd865BiRZff?si=K-eV7XftQuyWJuW_5d2w0Q" 
+               target="_blank" 
+               class="release-item">
+                <img src="We lit cover.JPG" alt="C Fettie - We Lit">
+                <h3>We Lit</h3>
                 <p>C Fettie</p>
             </a>
-            
-            <a href="artists.html#killahdae" class="release-item">
-                <img src="Crash out cover.JPG" alt="Killah Dae - Crash Out" />
+
+            <!-- KILLAH DAE – CRASH OUT -->
+            <a href="https://open.spotify.com/album/1SRo0iya3VTHnA9AccCopp?si=Nogd26svT9eTbw6x0xE9hg" 
+               target="_blank" 
+               class="release-item">
+                <img src="Crash out cover.JPG" alt="Killah Dae - Crash Out">
                 <h3>Crash Out</h3>
                 <p>Killah Dae feat. Ty Topshelf</p>
             </a>
 
-            <a href="artists.html#kvngswagg" class="release-item">
-                <img src="Cantsay2much cover.JPG" alt="Kvng Swagg - Can't Say 2 Much" />
+            <!-- KVNG SWAGG – CAN’T SAY 2 MUCH -->
+            <a href="https://open.spotify.com/album/39jfdycEgQ5U8jAyJWW7yz?si=JBk4tMZQRJCAehDv_gokxg" 
+               target="_blank" 
+               class="release-item">
+                <img src="Cantsay2much cover.JPG" alt="Kvng Swagg - Can't Say 2 Much">
                 <h3>Can't Say 2 Much</h3>
                 <p>Kvng Swagg</p>
             </a>
 
-             <a href="artists.html#killahdae" class="release-item">
-                <img src="Forbes list cover.JPG" alt="Killah Dae - Forbes List" />
-                <h3>Forbes List</h3>
-                <p>Killah Dae</p>
-            </a>
-
-            </div>
+        </div>
     </section>
 
     <footer>
