@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Topshelf Sounds & Ent. | Home</title>
-
+    
     <style>
         /* GLOBAL */
         body {
@@ -16,14 +16,15 @@
         }
 
         h1, h2, h3 {
-            font-weight: 800;
+            font-weight: 700;
+            color: #1a1a1a;
         }
 
         /* HEADER */
         header {
             text-align: center;
             padding: 25px 20px 10px;
-            background: #fff;
+            background: #ffffff;
         }
 
         header img {
@@ -32,22 +33,24 @@
         }
 
         h1 {
-            font-size: 2.4rem;
+            font-size: 2.5rem;
             margin-top: 10px;
             text-transform: uppercase;
             letter-spacing: 2px;
+            font-weight: 900;
         }
 
-        /* NAV */
+        /* NAVIGATION */
         nav {
             background: #1a1a1a;
-            text-align: center;
             padding: 12px 0;
+            text-align: center;
             border-bottom: 5px solid #FFC107;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         nav a {
-            color: #fff;
+            color: #ffffff;
             text-decoration: none;
             margin: 0 20px;
             font-size: 1rem;
@@ -65,13 +68,14 @@
         .hero-section {
             background-image: url('Hero background .JPG');
             background-size: cover;
-            background-position: center;
-            height: 580px;
-            position: relative;
+            background-position: center 30%;
+            height: 600px;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             text-align: center;
+            position: relative;
+            margin-bottom: 50px;
             box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
         }
 
@@ -83,33 +87,31 @@
         }
 
         .hero-content {
-            position: relative;
             z-index: 10;
             color: #fff;
-            padding: 20px;
         }
 
         .hero-content h2 {
             font-size: 4rem;
             margin: 0;
             font-weight: 900;
-            letter-spacing: -1px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.7);
         }
 
         .hero-content p {
             font-size: 1.6rem;
-            margin: 20px 0;
+            margin: 20px 0 40px;
             color: #FFC107;
         }
 
         .hero-button {
             background: #FFC107;
             color: #1a1a1a;
-            padding: 16px 38px;
-            font-weight: 800;
-            text-decoration: none;
+            padding: 18px 40px;
             border-radius: 50px;
-            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 1.3rem;
             transition: 0.3s;
         }
 
@@ -118,10 +120,10 @@
             transform: scale(1.05);
         }
 
-        /* SECTIONS */
+        /* SECTION WRAPPER */
         .section {
             max-width: 1200px;
-            margin: 60px auto;
+            margin: 0 auto 60px;
             padding: 0 20px;
         }
 
@@ -130,6 +132,7 @@
             text-align: center;
             margin-bottom: 40px;
             text-transform: uppercase;
+            font-weight: 900;
         }
 
         /* VIDEO */
@@ -140,6 +143,7 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            margin-bottom: 20px;
         }
 
         .video-wrapper iframe {
@@ -148,29 +152,34 @@
             width: 100%;
             height: 100%;
             border: 0;
-            border-radius: 12px;
         }
 
         /* ROSTER */
+        .roster-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
         .roster-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 30px;
         }
 
         .artist-card {
-            background: #fff;
+            background: #ffffff;
             border-radius: 12px;
             overflow: hidden;
             text-decoration: none;
-            color: #1a1a1a;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            color: inherit;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             transition: 0.3s;
         }
 
         .artist-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 14px 28px rgba(0,0,0,0.2);
+            transform: translateY(-8px);
         }
 
         .artist-card img {
@@ -181,22 +190,20 @@
         }
 
         .artist-card h3 {
-            text-align: center;
-            font-size: 1.5rem;
+            margin: 15px 0 10px;
+            font-size: 1.6rem;
             font-weight: 800;
-            margin: 18px 0 8px;
         }
 
         .view-profile-button {
-            display: block;
-            width: fit-content;
-            margin: 0 auto 20px;
-            padding: 10px 24px;
+            margin-bottom: 20px;
+            display: inline-block;
             background: #1a1a1a;
             color: #fff;
+            padding: 10px 25px;
             border-radius: 50px;
+            font-size: 1rem;
             font-weight: 700;
-            text-decoration: none;
             border: 2px solid #1a1a1a;
             transition: 0.3s;
         }
@@ -207,51 +214,29 @@
             border-color: #FFC107;
         }
 
-        /* SERVICES BOX */
-        .services-box {
-            background: #fff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .services-box ul {
-            line-height: 1.9;
-            font-size: 1.1rem;
-        }
-
-        /* CONTACT */
-        .contact {
-            text-align: center;
-            font-size: 1.2rem;
-        }
-
         /* FOOTER */
         footer {
             background: #1a1a1a;
             color: #ccc;
             text-align: center;
             padding: 30px 20px;
-            margin-top: 50px;
+            font-size: 0.9rem;
         }
 
-        footer a {
+        .footer-links a {
             color: #fff;
             text-decoration: none;
-            margin: 0 12px;
+            margin: 0 15px;
+            font-weight: 600;
         }
 
-        footer a:hover {
+        .footer-links a:hover {
             color: #FFC107;
         }
 
-        /* MOBILE */
         @media (max-width: 700px) {
             .hero-content h2 { font-size: 2.6rem; }
             .hero-content p { font-size: 1.2rem; }
-            .hero-section { height: 480px; }
         }
     </style>
 </head>
@@ -259,7 +244,7 @@
 <body>
 
 <header>
-    <img src="tsse-logo.PNG" alt="TSSE Logo">
+    <img src="tsse-logo.PNG" alt="TSSE Logo" />
     <h1>Topshelf Sounds & Ent.</h1>
 </header>
 
@@ -272,68 +257,58 @@
     <a href="contact.html">Contact</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero-section">
     <div class="hero-content">
-        <h2>WHERE STARS ARE BORN</h2>
-        <p>The home of Hip Hop and R&B’s most compelling new voices.</p>
-        <a class="hero-button" href="releases.html">Hear Our Latest Releases</a>
+        <h2>Where Stars Are Born</h2>
+        <p>The home of Hip Hop and R&B's most compelling voices.</p>
+        <a href="releases.html" class="hero-button">Hear Our Latest Releases</a>
     </div>
 </section>
 
-<!-- VIDEO -->
 <section class="section">
     <h2>Latest Release</h2>
     <div class="video-wrapper">
-        <iframe 
-            src="https://www.youtube.com/embed/0WfTASi_nFo"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube.com/embed/0WfTASi_nFo" allowfullscreen></iframe>
     </div>
-    <p style="text-align:center; margin-top:15px; font-size:1.2rem;">
-        <strong>Chea Butta – “Chest Out”</strong>
-    </p>
+    <p style="text-align:center;"><strong>Chea Butta – “Chest Out”</strong><br><em>Official Music Video</em></p>
 </section>
 
-<!-- ROSTER -->
-<section class="section">
-    <h2>Meet The Roster</h2>
-
+<section class="roster-section">
+    <h2>Meet the Roster</h2>
     <div class="roster-grid">
 
-        <a href="artists/tytopshelf.html" class="artist-card">
-            <img src="Ty photo.JPG">
+        <a href="artist/tytopshelf.html" class="artist-card">
+            <img src="Ty photo.JPG" alt="Ty Topshelf">
             <h3>Ty Topshelf</h3>
             <span class="view-profile-button">View Profile</span>
         </a>
 
-        <a href="artists/cheabutta.html" class="artist-card">
-            <img src="Butta performing .JPG">
+        <a href="artist/cheabutta.html" class="artist-card">
+            <img src="Butta performing .JPG" alt="Chea Butta">
             <h3>Chea Butta</h3>
             <span class="view-profile-button">View Profile</span>
         </a>
 
-        <a href="artists/kvngswagg.html" class="artist-card">
-            <img src="Takin da throne cover.JPG">
+        <a href="artist/kvngswagg.html" class="artist-card">
+            <img src="Takin da throne cover.JPG" alt="Kvng Swagg">
             <h3>Kvng Swagg</h3>
             <span class="view-profile-button">View Profile</span>
         </a>
 
-        <a href="artists/killahdae.html" class="artist-card">
-            <img src="Crash out cover.JPG">
+        <a href="artist/killahdae.html" class="artist-card">
+            <img src="Crash out cover.JPG" alt="Killah Dae">
             <h3>Killah Dae</h3>
             <span class="view-profile-button">View Profile</span>
         </a>
 
-        <a href="artists/cfettie.html" class="artist-card">
-            <img src="We lit cover.JPG">
+        <a href="artist/cfettie.html" class="artist-card">
+            <img src="We lit cover.JPG" alt="C Fettie">
             <h3>C Fettie</h3>
             <span class="view-profile-button">View Profile</span>
         </a>
 
-        <a href="artists/pyruudavixen.html" class="artist-card">
-            <img src="Pyruu photo.JPG">
+        <a href="artist/pyruudavixen.html" class="artist-card">
+            <img src="Pyruu photo.JPG" alt="Pyruu DaVixen">
             <h3>Pyruu DaVixen</h3>
             <span class="view-profile-button">View Profile</span>
         </a>
@@ -341,32 +316,12 @@
     </div>
 </section>
 
-<!-- SERVICES -->
-<section class="section">
-    <h2>TSSE Studio & Creative Services</h2>
-    <div class="services-box">
-        <ul>
-            <li>🔥 Mixing & Mastering</li>
-            <li>🎤 Professional Recording</li>
-            <li>🎨 Cover Art & Graphics</li>
-            <li>📈 Rollout Planning</li>
-            <li>📸 Photoshoots</li>
-            <li>🎬 Promo Content & Visual Assets</li>
-        </ul>
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section class="section contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:tsse@execs.com">tsse@execs.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/tsse_topshelf" target="_blank">@tsse_topshelf</a></p>
-</section>
-
 <footer>
-    <a href="https://youtube.com/@tsse_videos" target="_blank">YouTube</a> |
-    <a href="mailto:tsse@execs.com">Contact</a>
-    <br><br>
+    <div class="footer-links">
+        <a href="https://youtube.com/@tsse_videos?si=7uNLWQQKtQnSbMs6" target="_blank">YouTube</a>
+        <span style="color:#ccc;">|</span>
+        <a href="mailto:tsse@execs.com">Contact Us</a>
+    </div>
     © 2025 Topshelf Sounds & Ent. All Rights Reserved.
 </footer>
 
