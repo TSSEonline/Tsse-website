@@ -2,115 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Topshelf Sounds & Ent. | About Us</title>
     
     <style>
-        /* --------------------------------------
-           GLOBAL STYLES (Copied from index.html)
-           -------------------------------------- */
+        /* GLOBAL */
         body {
             margin: 0;
             padding: 0;
-            background: #f7f7f7;
-            font-family: Avenir, Helvetica, sans-serif;
-            color: #333333;
+            background: #f4f4f4;
+            font-family: 'Inter', Avenir, Helvetica, sans-serif;
+            color: #222;
         }
 
         h1, h2, h3 {
+            margin: 0;
+            padding: 0;
             color: #1a1a1a;
         }
 
-        /* --------------------------------------
-           HEADER & NAVIGATION (Copied from index.html)
-           -------------------------------------- */
+        /* HEADER */
         header {
             text-align: center;
             padding: 40px 20px 20px;
+            background: #ffffff;
         }
 
         header img {
-            width: 200px;
+            width: 180px;
             max-width: 80%;
         }
 
-        h1 {
-            font-size: 2.8rem;
-            margin-top: 15px;
-            letter-spacing: 1px;
-            font-weight: 700;
+        header h1 {
+            font-size: 2.6rem;
+            margin-top: 10px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
         }
 
+        /* NAV */
         nav {
-            background: #ffffff;
-            padding: 15px 0;
+            background: #1a1a1a;
+            padding: 12px 0;
             text-align: center;
-            border-top: 1px solid #eeeeee;
-            border-bottom: 3px solid #FFC107;
+            border-bottom: 4px solid #FFC107;
         }
 
         nav a {
-            color: #333333;
+            color: #ffffff;
+            margin: 0 22px;
             text-decoration: none;
-            margin: 0 25px;
             font-size: 1.05rem;
             font-weight: 600;
-            transition: color 0.3s;
+            transition: 0.3s;
         }
 
         nav a:hover {
             color: #FFC107;
         }
 
-        /* --------------------------------------
-           PAGE SPECIFIC STYLES: ABOUT CONTENT
-           -------------------------------------- */
+        /* ABOUT PAGE CONTENT */
         .about-container {
-            padding: 50px 20px;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
+            padding: 50px 20px 70px;
         }
 
         .about-container h2 {
-            font-size: 2.5rem;
+            font-size: 2.7rem;
+            font-weight: 900;
             color: #FFC107;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 45px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .section-block {
             background: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            margin-bottom: 30px;
+            padding: 35px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
         }
-        
+
         .section-block h3 {
-            font-size: 1.8rem;
-            margin-top: 0;
-            border-bottom: 2px solid #eeeeee;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: #1a1a1a;
+            border-left: 5px solid #FFC107;
+            padding-left: 12px;
+            margin-bottom: 18px;
+            text-transform: uppercase;
         }
 
         .section-block p {
-            line-height: 1.7;
-            font-size: 1.05rem;
-            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.75;
+            color: #444;
             margin-bottom: 20px;
         }
 
+        /* VALUES */
         .values-list {
             list-style: none;
+            margin: 0;
             padding: 0;
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
         .values-list li {
-            padding: 10px 0;
+            padding: 12px 0;
+            font-size: 1.1rem;
             font-weight: 600;
-            border-bottom: 1px dotted #eeeeee;
+            border-bottom: 1px solid #eee;
         }
 
         .values-list li strong {
@@ -118,72 +124,88 @@
             margin-right: 8px;
         }
 
-        /* --------------------------------------
-           FOOTER (Copied from index.html)
-           -------------------------------------- */
+        /* FOOTER */
         footer {
-            margin-top: 0;
-            background: #ffffff;
-            color: #999; 
+            background: #1a1a1a;
+            color: #ccc;
             text-align: center;
-            padding: 20px;
-            font-size: 0.85rem;
-            border-top: 1px solid #eeeeee;
+            padding: 25px 20px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <img src="tsse-logo.png" alt="Topshelf Sounds & Ent. Logo" />
-        <h1>Topshelf Sounds & Ent.</h1>
-    </header>
+<header>
+    <!-- Updated Logo -->
+    <img src="tsse-logo.PNG" alt="Topshelf Sounds & Ent. Logo" />
+    <h1>Topshelf Sounds & Ent.</h1>
+</header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="artists.html">Artists</a>
-        <a href="releases.html">Releases</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="artists.html">Artists</a>
+    <a href="releases.html">Releases</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
-    <section class="about-container">
-        <h2>About Topshelf Sounds & Ent.</h2>
+<section class="about-container">
+    <h2>About Topshelf Sounds & Ent.</h2>
 
-        <div class="section-block">
-            <h3>Our Mission</h3>
-            <p>
-                Topshelf Sounds & Ent. (TSSE) was founded on the principle that **authenticity is the highest form of talent**. We are more than just a music label; we are a culture hub dedicated to finding, developing, and amplifying artists whose stories are real and whose voices are undeniable. We believe in providing our artists with the platform and resources needed to maintain creative control while reaching a global audience.
-            </p>
-            <p>
-                From the underground circuits to the mainstream airwaves, our mission is to ensure that the most compelling and raw talent receives the **"topshelf"** treatment they deserve.
-            </p>
-        </div>
+    <!-- MISSION -->
+    <div class="section-block">
+        <h3>Our Mission</h3>
+        <p>
+            Topshelf Sounds & Ent. (TSSE) exists to push culture forward. Built on the belief that 
+            <strong>authenticity is the highest form of talent</strong>, TSSE is a home for visionaries — 
+            artists who speak from the heart, create from real experiences, and lead with truth.
+        </p>
+        <p>
+            We provide a platform where artists keep their voice, their power, and their creative freedom. 
+            From raw street stories to polished R&B melodies, TSSE is dedicated to developing timeless art 
+            and amplifying the voices the world needs to hear.
+        </p>
+    </div>
 
-        <div class="section-block">
-            <h3>Our History</h3>
-            <p>
-                Founded in **2018**, Topshelf Sounds & Ent. quickly established itself as a leading independent force in **Hip Hop and R&B**. Driven by a commitment to quality over quantity, the label built its reputation on supporting artists like **Ty Topshelf** and **Chea Butta** early in their careers. Our success is rooted in strong community ties and a deep understanding of the evolving music landscape, allowing us to consistently break ground and set trends.
-            </p>
-        </div>
+    <!-- HISTORY -->
+    <div class="section-block">
+        <h3>Our History</h3>
+        <p>
+            Founded in <strong>2013</strong>, Topshelf Sounds & Ent. started as a small movement driven by 
+            the hunger to create something different — something honest. Built by 
+            <strong>Ty Topshelf</strong>, the label grew from a local collective into a rising independent force 
+            in Hip Hop and R&B.
+        </p>
+        <p>
+            What began in Norfolk, VA has evolved into a full creative powerhouse: a label known for development, 
+            direction, brand-building, and a signature “TopShelf” standard of excellence. 
+        </p>
+        <p>
+            From Chea Butta’s charisma to Kvng Swagg’s energy, Killah Dae’s raw storytelling, C Fettie’s 
+            club-moving presence, and Ty Topshelf’s visionary leadership — TSSE continues to shape the new wave.
+        </p>
+    </div>
 
-        <div class="section-block">
-            <h3>Core Values</h3>
-            <p>Our work is guided by four pillars that define every decision we make:</p>
-            <ul class="values-list">
-                <li><strong>Authenticity:</strong> We value honesty and originality in music and personal expression above all else.</li>
-                <li><strong>Empowerment:</strong> We empower our artists to own their narrative and creative vision.</li>
-                <li><strong>Excellence:</strong> We are committed to producing and promoting music that meets the highest standards of quality—the "Topshelf" standard.</li>
-                <li><strong>Community:</strong> We foster a collaborative environment that connects artists, producers, and fans.</li>
-            </ul>
-        </div>
-        
-    </section>
+    <!-- CORE VALUES -->
+    <div class="section-block">
+        <h3>Core Values</h3>
+        <p>Everything we build is grounded in four pillars that define who we are:</p>
 
-    <footer>
-        © 2025 Topshelf Sounds & Ent. All Rights Reserved.
-    </footer>
+        <ul class="values-list">
+            <li><strong>Authenticity:</strong> Real stories. Real voices. Real music.</li>
+            <li><strong>Empowerment:</strong> Every artist owns their identity and direction.</li>
+            <li><strong>Excellence:</strong> The “TopShelf Standard” — nothing less.</li>
+            <li><strong>Community:</strong> Built by the people, for the people.</li>
+        </ul>
+    </div>
+
+</section>
+
+<footer>
+    © 2025 Topshelf Sounds & Ent. All Rights Reserved.
+</footer>
 
 </body>
 </html>
