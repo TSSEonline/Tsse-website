@@ -10,134 +10,111 @@
             margin: 0;
             padding: 0;
             background: #fdfdfd;
-            font-family: Avenir, Helvetica, sans-serif;
-            color: #222;
-        }
-
-        header {
-            text-align: center;
-            padding: 40px 20px 25px;
-        }
-
-        header img {
-            width: 200px;
-            max-width: 80%;
-        }
-
-        h1 {
-            font-size: 2.8rem;
-            margin-top: 15px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
+            font-family: 'Inter', Avenir, Helvetica, sans-serif;
             color: #1a1a1a;
         }
 
-        nav {
-            background: #ffffff;
-            padding: 15px 0;
+        /* HEADER */
+        header {
             text-align: center;
-            border-top: 1px solid #eee;
-            border-bottom: 3px solid #FFC107;
+            padding: 40px 20px 25px;
+            background: #ffffff;
+        }
+
+        header img {
+            width: 180px;
+            max-width: 80%;
+        }
+
+        header h1 {
+            font-size: 2.6rem;
+            margin-top: 12px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background: #1a1a1a;
+            padding: 14px 0;
+            text-align: center;
+            border-bottom: 4px solid #FFC107;
         }
 
         nav a {
-            color: #333;
+            color: #ffffff;
             text-decoration: none;
-            margin: 0 25px;
+            margin: 0 20px;
             font-size: 1.05rem;
             font-weight: 600;
-            transition: color 0.3s;
+            transition: 0.3s;
         }
 
         nav a:hover {
             color: #FFC107;
         }
 
-        .artist-list {
-            padding: 50px 20px;
-            max-width: 1100px;
-            margin: 0 auto;
+        /* PAGE WRAPPER */
+        .artists-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
         }
 
-        .artist-profile {
-            background: #fff;
+        .artists-container h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* ARTIST GRID */
+        .artist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 35px;
+        }
+
+        .artist-card {
+            background: #ffffff;
             border-radius: 12px;
-            margin-bottom: 60px;
-            padding: 40px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            transition: 0.3s;
-        }
-
-        .artist-profile:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-        }
-
-        .artist-gallery {
-            width: 40%;
-            min-width: 260px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .artist-gallery img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .artist-info {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .artist-info h2 {
-            font-size: 3rem;
-            color: #FFC107;
-            margin-bottom: 10px;
-            border-bottom: 3px solid #eee;
-            padding-bottom: 5px;
-        }
-
-        .artist-info h3 {
-            font-size: 1.4rem;
-            color: #555;
-            margin-top: 0;
-        }
-
-        .artist-info p {
-            line-height: 1.7;
-            font-size: 1.05rem;
-            margin-bottom: 20px;
-        }
-
-        .view-btn {
-            background: #1a1a1a;
-            color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
+            overflow: hidden;
             text-decoration: none;
-            font-weight: 700;
-            display: inline-block;
-            transition: 0.3s;
+            color: inherit;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            transition: 0.3s ease;
         }
 
-        .view-btn:hover {
-            background: #FFC107;
-            color: #1a1a1a;
+        .artist-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+        }
+
+        .artist-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-bottom: 5px solid #FFC107;
+        }
+
+        .artist-card h3 {
+            padding: 18px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-align: center;
+            letter-spacing: 1px;
         }
 
         footer {
-            background: #fff;
-            padding: 20px;
             text-align: center;
-            font-size: 0.85rem;
-            color: #888;
-            border-top: 1px solid #eee;
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 25px 20px;
+            margin-top: 50px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -145,7 +122,7 @@
 <body>
 
 <header>
-    <img src="tsse-logo.png" alt="Topshelf Sounds & Ent. Logo" />
+    <img src="tsse-logo.PNG" alt="Topshelf Sounds & Ent. Logo" />
     <h1>Topshelf Sounds & Ent.</h1>
 </header>
 
@@ -158,91 +135,42 @@
     <a href="contact.html">Contact</a>
 </nav>
 
-<section class="artist-list">
+<section class="artists-container">
+    <h2>Meet the Roster</h2>
 
-    <!-- CHEA BUTTA -->
-    <div class="artist-profile">
-        <div class="artist-gallery">
-            <img src="Butta performing .JPG" />
-            <img src="Butta cover.JPG" />
-        </div>
-        <div class="artist-info">
-            <h2>CHEA BUTTA</h2>
-            <h3>The Voice of the Block</h3>
-            <p>Raw lyricism, real stories, and a presence that owns every room she walks into.</p>
-            <a class="view-btn" href="artists/cheabutta.html">View Full Profile</a>
-        </div>
+    <div class="artist-grid">
+
+        <a href="artist/cheabutta.html" class="artist-card">
+            <img src="Butta performing .JPG" alt="Chea Butta" />
+            <h3>Chea Butta</h3>
+        </a>
+
+        <a href="artist/tytopshelf.html" class="artist-card">
+            <img src="Ty photo.JPG" alt="Ty Topshelf" />
+            <h3>Ty Topshelf</h3>
+        </a>
+
+        <a href="artist/kvngswagg.html" class="artist-card">
+            <img src="Takin da throne cover.JPG" alt="Kvng Swagg" />
+            <h3>Kvng Swagg</h3>
+        </a>
+
+        <a href="artist/killahdae.html" class="artist-card">
+            <img src="Crash out cover.JPG" alt="Killah Dae" />
+            <h3>Killah Dae</h3>
+        </a>
+
+        <a href="artist/cfettie.html" class="artist-card">
+            <img src="We lit cover.JPG" alt="C Fettie" />
+            <h3>C Fettie</h3>
+        </a>
+
+        <a href="artist/pyruudavixen.html" class="artist-card">
+            <img src="Pyruu photo.JPG" alt="Pyruu DaVixen" />
+            <h3>Pyruu DaVixen</h3>
+        </a>
+
     </div>
-
-    <!-- TY TOPSHELF -->
-    <div class="artist-profile">
-        <div class="artist-gallery">
-            <img src="Ty photo.JPG" />
-            <img src="We lit cover.JPG" />
-        </div>
-        <div class="artist-info">
-            <h2>TY TOPSHELF</h2>
-            <h3>The Architect of Sound</h3>
-            <p>Visionary, creator, and the strategic mind behind the TSSE movement.</p>
-            <a class="view-btn" href="artists/tytopshelf.html">View Full Profile</a>
-        </div>
-    </div>
-
-    <!-- KVNG SWAGG -->
-    <div class="artist-profile">
-        <div class="artist-gallery">
-            <img src="Takin da throne cover.JPG" />
-            <img src="Cantsay2much cover.JPG" />
-        </div>
-        <div class="artist-info">
-            <h2>KVNG SWAGG</h2>
-            <h3>The Crown Prince of Trap</h3>
-            <p>High-energy trap with confidence sharpened by struggle and ambition.</p>
-            <a class="view-btn" href="artists/kvngswagg.html">View Full Profile</a>
-        </div>
-    </div>
-
-    <!-- KILLAH DAE -->
-    <div class="artist-profile">
-        <div class="artist-gallery">
-            <img src="Crash out cover.JPG" />
-            <img src="Pain and sacrifice cover.JPG" />
-        </div>
-        <div class="artist-info">
-            <h2>KILLAH DAE</h2>
-            <h3>The Street Storyteller</h3>
-            <p>Raw truth, emotional weight, and a voice that cuts through the noise.</p>
-            <a class="view-btn" href="artists/killahdae.html">View Full Profile</a>
-        </div>
-    </div>
-
-    <!-- C FETTIE -->
-    <div class="artist-profile">
-        <div class="artist-gallery">
-            <img src="We lit cover.JPG" />
-        </div>
-        <div class="artist-info">
-            <h2>C FETTIE</h2>
-            <h3>The Party Starter</h3>
-            <p>High-octane anthems built for the clubs, the cars, and the crowds.</p>
-            <a class="view-btn" href="artists/cfettie.html">View Full Profile</a>
-        </div>
-    </div>
-
-    <!-- PYRUU DAVIXEN -->
-    <div class="artist-profile">
-        <div class="artist-gallery">
-            <img src="Pyruu photo.JPG" />
-            <img src="Pyruu photo2.JPG" />
-        </div>
-        <div class="artist-info">
-            <h2>PYRUU DAVIXEN</h2>
-            <h3>The Enigmatic Force</h3>
-            <p>Mysterious, melodic, fierce — one of TSSE’s most unique rising voices.</p>
-            <a class="view-btn" href="artists/pyruudavixen.html">View Full Profile</a>
-        </div>
-    </div>
-
 </section>
 
 <footer>
